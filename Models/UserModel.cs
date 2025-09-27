@@ -4,6 +4,7 @@ namespace LearnApiNetCore.Models
     {
         public int Id { get; set; }
         public string NameXXX { get; set; }
+        public string TenUser { get; set; }
         public string Email { get; set; }
     }
 }
