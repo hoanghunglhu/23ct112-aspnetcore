@@ -1,11 +1,15 @@
 using Microsoft.EntityFrameworkCore;
 
-namespace LearnApiNetCore.Entity;
+var builder = WebApplication.CreateBuilder(args);
 
-public class AppDbContext : DbContext
-{
-  public AppDbContext(DbContextOptions<AppDbContext> options)
-  : base(options) { }
+// Add DbContext with SQL Server
+builder.Services.AddDbContext<AppDbContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-  public DbSet<User> Users { get; set; }
-}
+builder.Services.AddControllers();
+
+var app = builder.Build();
+
+app.MapControllers();
+
+app.Run();
