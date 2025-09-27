@@ -1,6 +1,8 @@
+
+
 using Microsoft.EntityFrameworkCore;
+
 using LearnApiNetCore.Entity;
-using Microsoft.EntityFrameworkCore.SqlServer;
 
 var builder = WebApplication.CreateBuilder(args);
 
