@@ -10,6 +10,7 @@ IF NOT EXISTS (
 )
 CREATE DATABASE LearnAspNetCore
 GO
+--USE LearnAspNetCore
 
 -- Create a new table called '[users]' in schema '[dbo]'
 -- Drop the table if it already exists
