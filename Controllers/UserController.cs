@@ -1,13 +1,14 @@
 using LearnApiNetCore.Entity;
 using LearnApiNetCore.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Authorization;
 using System.Text.Json;
 
 namespace LearnApiNetCore.Controllers
 {
   [ApiController]
   [Route("api/[controller]")]
-  //api/hello
+  [Authorize] // Yêu cầu authentication cho tất cả endpoints
   public class UserController : ControllerBase
   {
     private readonly AppDbContext _context;
