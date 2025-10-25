@@ -6,35 +6,35 @@ using System.Text.Json;
 
 namespace LearnApiNetCore.Controllers
 {
-  [ApiController]
-  [Route("api/[controller]")]
-  public class NewController : ControllerBase
-  {
-    private readonly AppDbContext _context;
-    private readonly IMemoryCache _cache;
-    private readonly string? cacheKey = "newList";
-
-    public NewController(IMemoryCache cache, AppDbContext context)
+    [ApiController]
+    [Route("api/[controller]")]
+    public class NewController : ControllerBase
     {
-        _context = context;
-        _cache = cache;
-    }
+        private readonly AppDbContext _context;
+        private readonly IMemoryCache _cache;
+        private readonly string? cacheKey = "newList";
 
-    [HttpGet]
-    public IActionResult GetNews()
-    {
-        if(!_cache.TryGetValue(cacheKey,out List<User> newList))
+        public NewController(IMemoryCache cache, AppDbContext context)
         {
-            newList = _context.Users.ToList();
-
-            MemoryCacheEntryOptions cacheOptions = new MemoryCacheEntryOptions().SetAbsoluteExpiration(TimeSpan.FromSeconds(60));
-            _cache.Set(cacheKey, newList, cacheOptions);
+            _context = context;
+            _cache = cache;
         }
 
-        return Ok(newList);
-    
-    }
-    [HttpPost("clear-cache")]
+        [HttpGet]
+        public IActionResult GetNews()
+        {
+            if (!_cache.TryGetValue(cacheKey, out List<User> newList))
+            {
+                newList = _context.Users.ToList();
+
+                MemoryCacheEntryOptions cacheOptions = new MemoryCacheEntryOptions().SetAbsoluteExpiration(TimeSpan.FromSeconds(60));
+                _cache.Set(cacheKey, newList, cacheOptions);
+            }
+
+            return Ok(newList);
+
+        }
+        [HttpPost("clear-cache")]
         public IActionResult ClearCache()
         {
             _cache.Remove(cacheKey);
