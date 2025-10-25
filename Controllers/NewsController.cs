@@ -7,8 +7,8 @@ using Microsoft.Extensions.Caching.Memory;
 namespace LearnApiNetCore.Controllers
 {
     [ApiController]
-    [Route("[api/news")]
-    class NewsController : ControllerBase
+    [Route("api/[controller]")]
+    public class NewsController : ControllerBase
     {
         private readonly AppDbContext _context;
         private readonly IMemoryCache _cache;
