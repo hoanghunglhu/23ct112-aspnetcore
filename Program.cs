@@ -12,6 +12,8 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 
 builder.Services.AddControllers();
 builder.Services.AddSwaggerGen();
+builder.Services.AddMemoryCache();
+builder.Services.AddEndpointsApiExplorer();
 
 var app = builder.Build();
 
@@ -24,4 +26,5 @@ if(app.Environment.IsDevelopment())
 app.MapControllers();
 
 app.Run();
+
 
