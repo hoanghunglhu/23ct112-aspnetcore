@@ -5,6 +5,7 @@ using Microsoft.Extensions.Caching.Memory;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 
 namespace LearnApiNetCore.Controllers
 {
@@ -21,47 +22,29 @@ namespace LearnApiNetCore.Controllers
             _context = context;
             _cache = cache;
         }
+
         [HttpGet]
         public IActionResult GetNews()
         {
-            if (_cache.TryGetValue(NEWS_CACHE_KEY, out List<News> cachedNews))
+            List<News> threeNews;
+
+            if (!_cache.TryGetValue(NEWS_CACHE_KEY, out threeNews))
             {
-                return Ok(new
-                {
-                    source = "cache",
-                    count = cachedNews.Count,
-                    data = cachedNews
-                });
+                threeNews = _context.News.Take(3).ToList();
+
+                var cacheOptions = new MemoryCacheEntryOptions()
+                    .SetAbsoluteExpiration(TimeSpan.FromSeconds(60));
+
+                _cache.Set(NEWS_CACHE_KEY, threeNews, cacheOptions);
             }
-            var allNews = _context.News.ToList();
-            var firstThree = allNews.Take(3).ToList();
-
-            var cacheOptions = new MemoryCacheEntryOptions
-            {
-                AbsoluteExpirationRelativeToNow = TimeSpan.FromSeconds(60),
-                SlidingExpiration = TimeSpan.FromSeconds(30)
-            };
-
-            _cache.Set(NEWS_CACHE_KEY, firstThree, cacheOptions);
 
             return Ok(new
             {
-                source = "database",
-                count = firstThree.Count,
-                data = firstThree
+                cacheKey = NEWS_CACHE_KEY,
+                data = threeNews
             });
         }
-        [HttpGet("all")]
-        public IActionResult GetAllNews()
-        {
-            var all = _context.News.ToList();
-            return Ok(new
-            {
-                source = "database",
-                count = all.Count,
-                data = all
-            });
-        }
+
         [HttpDelete("clear-cache")]
         public IActionResult ClearCache()
         {
