@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using LearnApiNetCore.Entity;
 
 var builder = WebApplication.CreateBuilder(args);
-
+builder.Services.AddMemoryCache();
 // Add DbContext with SQL Server
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
@@ -19,7 +19,7 @@ if(app.Environment.IsDevelopment())
      app.UseSwagger();
     app.UseSwaggerUI();
 }
-
+app.UseHttpsRedirection();
 app.MapControllers();
 
 app.Run();
