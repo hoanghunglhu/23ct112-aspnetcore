@@ -5,6 +5,11 @@ using Microsoft.EntityFrameworkCore;
 using LearnApiNetCore.Entity;
 
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddMemoryCache();
+
+builder.Services.AddControllers();
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
 
 // Add DbContext with SQL Server
 builder.Services.AddDbContext<AppDbContext>(options =>
