@@ -28,6 +28,15 @@ CREATE TABLE [dbo].[users]
     [address] NVARCHAR(500)
 );
 GO
+Create table [dbo].[news]
+{
+    [id] INT NOT NULL PRIMARY KEY IDENTITY(1,1), -- Primary Key column
+    [title] NVARCHAR(255) NOT NULL,
+    [content] NVARCHAR(255) NOT NULL,
+    [author] NVARCHAR(255) NOT NULL
+    
+}
+go
 
 -- Create a new table called '[user_tokens]' in schema '[dbo]'
 -- Drop the table if it already exists

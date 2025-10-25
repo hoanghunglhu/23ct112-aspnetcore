@@ -12,6 +12,7 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 
 builder.Services.AddControllers();
 builder.Services.AddSwaggerGen();
+builder.Services.AddMemoryCache();
 
 var app = builder.Build();
 
