@@ -1,0 +1,126 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\BaiTap\\K\u00EC 5\\Backend\\Baitap\\23ct112-aspnetcore\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{1D04649A-EBD1-E290-9187-EB3A9326E553}|LearnAspNetCore.csproj|d:\\baitap\\k\u00EC 5\\backend\\baitap\\23ct112-aspnetcore\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1D04649A-EBD1-E290-9187-EB3A9326E553}|LearnAspNetCore.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1D04649A-EBD1-E290-9187-EB3A9326E553}|LearnAspNetCore.csproj|d:\\baitap\\k\u00EC 5\\backend\\baitap\\23ct112-aspnetcore\\entity\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1D04649A-EBD1-E290-9187-EB3A9326E553}|LearnAspNetCore.csproj|solutionrelative:entity\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1D04649A-EBD1-E290-9187-EB3A9326E553}|LearnAspNetCore.csproj|d:\\baitap\\k\u00EC 5\\backend\\baitap\\23ct112-aspnetcore\\entity\\news.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1D04649A-EBD1-E290-9187-EB3A9326E553}|LearnAspNetCore.csproj|solutionrelative:entity\\news.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1D04649A-EBD1-E290-9187-EB3A9326E553}|LearnAspNetCore.csproj|d:\\baitap\\k\u00EC 5\\backend\\baitap\\23ct112-aspnetcore\\entity\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1D04649A-EBD1-E290-9187-EB3A9326E553}|LearnAspNetCore.csproj|solutionrelative:entity\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1D04649A-EBD1-E290-9187-EB3A9326E553}|LearnAspNetCore.csproj|d:\\baitap\\k\u00EC 5\\backend\\baitap\\23ct112-aspnetcore\\controllers\\newscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1D04649A-EBD1-E290-9187-EB3A9326E553}|LearnAspNetCore.csproj|solutionrelative:controllers\\newscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1D04649A-EBD1-E290-9187-EB3A9326E553}|LearnAspNetCore.csproj|d:\\baitap\\k\u00EC 5\\backend\\baitap\\23ct112-aspnetcore\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{1D04649A-EBD1-E290-9187-EB3A9326E553}|LearnAspNetCore.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "User.cs",
+              "DocumentMoniker": "D:\\BaiTap\\K\u00EC 5\\Backend\\Baitap\\23ct112-aspnetcore\\Entity\\User.cs",
+              "RelativeDocumentMoniker": "Entity\\User.cs",
+              "ToolTip": "D:\\BaiTap\\K\u00EC 5\\Backend\\Baitap\\23ct112-aspnetcore\\Entity\\User.cs",
+              "RelativeToolTip": "Entity\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-25T04:26:28.706Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\BaiTap\\K\u00EC 5\\Backend\\Baitap\\23ct112-aspnetcore\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "D:\\BaiTap\\K\u00EC 5\\Backend\\Baitap\\23ct112-aspnetcore\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-25T04:16:30.78Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "NewsController.cs",
+              "DocumentMoniker": "D:\\BaiTap\\K\u00EC 5\\Backend\\Baitap\\23ct112-aspnetcore\\Controllers\\NewsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\NewsController.cs",
+              "ToolTip": "D:\\BaiTap\\K\u00EC 5\\Backend\\Baitap\\23ct112-aspnetcore\\Controllers\\NewsController.cs",
+              "RelativeToolTip": "Controllers\\NewsController.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAACUAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-25T04:15:08.873Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\BaiTap\\K\u00EC 5\\Backend\\Baitap\\23ct112-aspnetcore\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "D:\\BaiTap\\K\u00EC 5\\Backend\\Baitap\\23ct112-aspnetcore\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-10-25T04:11:55.871Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "D:\\BaiTap\\K\u00EC 5\\Backend\\Baitap\\23ct112-aspnetcore\\Entity\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "Entity\\AppDbContext.cs",
+              "ToolTip": "D:\\BaiTap\\K\u00EC 5\\Backend\\Baitap\\23ct112-aspnetcore\\Entity\\AppDbContext.cs",
+              "RelativeToolTip": "Entity\\AppDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-25T04:10:47.947Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "News.cs",
+              "DocumentMoniker": "D:\\BaiTap\\K\u00EC 5\\Backend\\Baitap\\23ct112-aspnetcore\\Entity\\News.cs",
+              "RelativeDocumentMoniker": "Entity\\News.cs",
+              "ToolTip": "D:\\BaiTap\\K\u00EC 5\\Backend\\Baitap\\23ct112-aspnetcore\\Entity\\News.cs",
+              "RelativeToolTip": "Entity\\News.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-25T04:09:40.104Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
