@@ -2,10 +2,31 @@ using LearnApiNetCore.Entity;
 using LearnApiNetCore.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Text.Json;
-
+using log4net;
 namespace LearnApiNetCore.Controllers
 {
   [ApiController]
+  [Route("[controller]")]
+    public class TestController : ControllerBase
+    {
+        private static readonly ILog log = LogManager.GetLogger(typeof(TestController));
+
+        [HttpGet("demo")]
+        public IActionResult GetDemo()
+        {
+            try
+            {
+                log.Info("Nhận yêu cầu GET /test/demo");
+                // throw new Exception("Lỗi thử nghiệm");
+                return Ok(new { message = "Test thành công!" });
+            }
+            catch (Exception ex)
+            {
+                log.Error("Đã xảy ra lỗi:", ex);
+                return StatusCode(500, "Đã ghi log lỗi vào file!");
+            }
+        }
+    }
   [Route("api/[controller]")]
   //api/hello
   public class UserController : ControllerBase
@@ -23,7 +44,7 @@ namespace LearnApiNetCore.Controllers
       var users = _context.Users.ToList();
       return Ok(users);
     }
-
+    
     [HttpPost]
     public IActionResult Create(UserModel model)
     {
