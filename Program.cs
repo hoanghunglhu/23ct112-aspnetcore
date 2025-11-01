@@ -1,34 +1,42 @@
-
-
-using Microsoft.EntityFrameworkCore;
-
-using LearnApiNetCore.Entity;
-
+using log4net;
+using log4net.Config;
+using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
-builder.Services.AddMemoryCache();
 
+// --- Cấu hình log4net ---
+var logRepository = LogManager.GetRepository(Assembly.GetEntryAssembly());
+XmlConfigurator.Configure(logRepository, new FileInfo("log4net.config"));
+var logger = LogManager.GetLogger(typeof(Program));
+
+// --- Cấu hình mặc định ---
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-
-// Add DbContext with SQL Server
-builder.Services.AddDbContext<AppDbContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
-
-builder.Services.AddControllers();
-builder.Services.AddSwaggerGen();
-
 var app = builder.Build();
 
-if(app.Environment.IsDevelopment())
+if (app.Environment.IsDevelopment())
 {
-     app.UseSwagger();
+    app.UseSwagger();
     app.UseSwaggerUI();
 }
 
+app.UseHttpsRedirection();
+app.UseAuthorization();
 app.MapControllers();
 
-app.Run();
-
+try
+{
+    logger.Info("Ứng dụng đang khởi động...");
+    app.Run();
+}
+catch (Exception ex)
+{
+    logger.Error("Lỗi nghiêm trọng khi khởi động ứng dụng.", ex);
+    throw;
+}
+finally
+{
+    logger.Info("Ứng dụng đã dừng.");
+}
