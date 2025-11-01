@@ -4,6 +4,7 @@ using log4net;
 using log4net.Config;
 using System.IO;
 
+
 var builder = WebApplication.CreateBuilder(args);
 
 // ====== CẤU HÌNH LOG4NET ======
