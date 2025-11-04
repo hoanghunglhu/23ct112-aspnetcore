@@ -1,0 +1,6 @@
+2025-11-04 18:11:58.642 +07:00 [INF] Ứng dụng đang khởi động...
+2025-11-04 18:11:58.786 +07:00 [INF] Now listening on: http://localhost:5296
+2025-11-04 18:11:58.791 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-11-04 18:11:58.792 +07:00 [INF] Hosting environment: Development
+2025-11-04 18:11:58.793 +07:00 [INF] Content root path: C:\Users\Admin\23ct112-aspnetcore\
+2025-11-04 18:12:16.072 +07:00 [INF] Application is shutting down...
