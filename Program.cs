@@ -4,8 +4,9 @@ using log4net;
 using log4net.Config;
 using System.IO;
 
-
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddTransient<EmailService>();
 
 // ====== CẤU HÌNH LOG4NET ======
 var logRepository = LogManager.GetRepository(System.Reflection.Assembly.GetEntryAssembly());
@@ -39,6 +40,7 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 builder.Services.AddControllers();
 builder.Services.AddSwaggerGen();
 builder.Services.AddMemoryCache();
+
 
 var app = builder.Build();
 
