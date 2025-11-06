@@ -18,8 +18,8 @@ public class MailController : ControllerBase
         {
             await _emailService.SendEmailAsync(
                 toEmail,
-                "Thông báo từ hệ thống Boba-Tea",
-                "<h3>Xin chào bạn!</h3><p>Cảm ơn bạn đã đặt hàng tại Yêu Nước Boba-Tea ❤️</p>"
+                "Thông báo từ hệ thống abcd",
+                "<h3>Xin chào bạn!</h3><p>Cảm ơn bạn đã đặt hàng tại abcd ❤️</p>"
             );
 
             return Ok("Gửi email thành công!");
