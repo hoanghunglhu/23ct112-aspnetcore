@@ -1,32 +1,65 @@
+using System;
 using LearnApiNetCore.Entity;
 using LearnApiNetCore.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Text.Json;
+using Log4NetManager = log4net.LogManager;
+using NLogManager = NLog.LogManager;
 using log4net;
+using System;
+
 namespace LearnApiNetCore.Controllers
 {
+  // -------------------------- TEST CONTROLLER --------------------------
   [ApiController]
-  [Route("[controller]")]
-    public class TestController : ControllerBase
+    [Route("api/[controller]")]
+    public class TestLog4NetController : ControllerBase
     {
-        private static readonly ILog log = LogManager.GetLogger(typeof(TestController));
+        private static readonly ILog log4 = LogManager.GetLogger(typeof(TestLog4NetController));
 
-        [HttpGet("demo")]
-        public IActionResult GetDemo()
+        [HttpGet("test")]
+        public IActionResult TestLog4Net()
         {
             try
             {
-                log.Info("Nhận yêu cầu GET /test/demo");
-                // throw new Exception("Lỗi thử nghiệm");
-                return Ok(new { message = "Test thành công!" });
+                log4.Info("Đang xử lý request bằng log4net");
+                int a = 10, b = 0;
+                int c = a / b; // lỗi giả lập
+                return Ok("Thành công");
             }
             catch (Exception ex)
             {
-                log.Error("Đã xảy ra lỗi:", ex);
-                return StatusCode(500, "Đã ghi log lỗi vào file!");
+                log4.Error("Lỗi khi xử lý request bằng log4net", ex);
+                return StatusCode(500, "Lỗi nội bộ server (log4net).");
             }
         }
     }
+
+    [ApiController]
+    [Route("api/[controller]")]
+    public class TestNLogController : ControllerBase
+    {
+        private static readonly NLog.ILogger nlogger = NLog.LogManager.GetCurrentClassLogger();
+
+        [HttpGet("test")]
+        public IActionResult TestNLog()
+        {
+            try
+            {
+                nlogger.Info("Đang xử lý request bằng NLog");
+                int a = 10, b = 0;
+                int c = a / b;
+                return Ok("Thành công");
+            }
+            catch (Exception ex)
+            {
+                nlogger.Error(ex, "Lỗi khi xử lý request bằng NLog");
+                return StatusCode(500, "Lỗi nội bộ server (NLog).");
+            }
+        }
+    }
+    // -------------------------- USER CONTROLLER --------------------------
+  [ApiController]
   [Route("api/[controller]")]
   //api/hello
   public class UserController : ControllerBase
