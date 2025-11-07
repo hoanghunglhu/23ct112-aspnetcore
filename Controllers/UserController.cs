@@ -8,7 +8,7 @@ namespace LearnApiNetCore.Controllers
 {
   [ApiController]
   [Route("api/[controller]")]
-  [Authorize] // Yêu cầu authentication cho tất cả endpoints
+  // [Authorize] // Yêu cầu authentication cho tất cả endpoints
   public class UserController : ControllerBase
   {
     private readonly AppDbContext _context;
