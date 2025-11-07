@@ -29,7 +29,7 @@ namespace LearnApiNetCore.Services
 
                 var mailMessage = new MailMessage
                 {
-                    From = new MailAddress(_smtpSettings.UserName, "ABC Hotel System"),
+                    From = new MailAddress(_smtpSettings.UserName, "Viên Xuân Quý"),
                     Subject = subject,
                     Body = body,
                     IsBodyHtml = true
