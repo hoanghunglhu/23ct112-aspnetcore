@@ -1,27 +1,58 @@
-
-using Microsoft.EntityFrameworkCore;
-
 using LearnApiNetCore.Entity;
+using Microsoft.EntityFrameworkCore;
+using NLog;
+using NLog.Web;
 
-var builder = WebApplication.CreateBuilder(args);
-builder.Services.AddMemoryCache();
+using EmailDemo.Services;
 
-// Add DbContext with SQL Server
-builder.Services.AddDbContext<AppDbContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+var logger = LogManager.Setup()
+    .LoadConfigurationFromFile("Nlog.config") 
+    .GetCurrentClassLogger();
 
-builder.Services.AddControllers();
-builder.Services.AddSwaggerGen();
-
-var app = builder.Build();
-
-if(app.Environment.IsDevelopment())
+try
 {
-     app.UseSwagger();
-    app.UseSwaggerUI();
+    logger.Info("Ứng dụng đang khởi động...");
+
+    var builder = WebApplication.CreateBuilder(args);
+
+    // Cấu hình NLog
+    builder.Logging.ClearProviders();
+    builder.Host.UseNLog();
+
+    // Cấu hình DbContext
+    builder.Services.AddDbContext<AppDbContext>(options =>
+        options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+    //Thêm EmailService
+    builder.Services.AddSingleton<EmailService>();
+
+    // Cấu hình controller và Swagger
+    builder.Services.AddControllers();
+    builder.Services.AddEndpointsApiExplorer();
+    builder.Services.AddSwaggerGen();
+
+    var app = builder.Build();
+
+    // Cấu hình pipeline
+    if (app.Environment.IsDevelopment())
+    {
+        app.UseSwagger();
+        app.UseSwaggerUI();
+    }
+
+    app.UseHttpsRedirection();
+    app.UseAuthorization();
+    app.MapControllers();
+
+    logger.Info("Ứng dụng đã khởi động thành công.");
+    app.Run();
 }
-
-app.MapControllers();
-
-app.Run();
-
+catch (Exception ex)
+{
+    logger.Error(ex, "Lỗi khi khởi động ứng dụng.");
+    throw;
+}
+finally
+{
+    LogManager.Shutdown();
+}
