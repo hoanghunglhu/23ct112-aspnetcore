@@ -1,4 +1,7 @@
+
+using Microsoft.EntityFrameworkCore;
 using LearnApiNetCore.Entity;
+
 
 namespace LearnApiNetCore.Services
 {

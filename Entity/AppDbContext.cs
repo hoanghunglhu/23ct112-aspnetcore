@@ -1,6 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 
-namespace LearnAspNetCore.Entity
+namespace LearnApiNetCore.Entity
 {
     public class AppDbContext : DbContext
     {

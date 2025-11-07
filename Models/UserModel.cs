@@ -10,7 +10,7 @@ namespace LearnApiNetCore.Models
 
         public DateTime birthday { get; set; }
 
-        public string phone { get; set; }
+        public int phone { get; set; }
 
         public string email { get; set; }
 

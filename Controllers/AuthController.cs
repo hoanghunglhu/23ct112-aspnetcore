@@ -8,6 +8,7 @@ namespace LearnApiNetCore.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
+    
     public class AuthController : ControllerBase
     {
         private readonly AppDbContext _context;

@@ -1,85 +1,84 @@
-<<<<<<< HEAD
-using Microsoft.EntityFrameworkCore;
-using LearnAspNetCore.Entity;
-=======
 
-using Microsoft.EntityFrameworkCore;
 using LearnApiNetCore.Entity;
 using LearnApiNetCore.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
+using NLog;
+using NLog.Web;
 using System.Text;
->>>>>>> main
 
-var builder = WebApplication.CreateBuilder(args);
+var logger = NLog.LogManager.Setup().LoadConfigurationFromAppSettings().GetCurrentClassLogger();
+logger.Debug("init main");
 
-// Add DbContext with SQL Server
-builder.Services.AddDbContext<AppDbContext>(options =>
-<<<<<<< HEAD
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"))
-);
-
-
-builder.Services.AddControllers();
-
-
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
-
-var app = builder.Build();
-
-
-=======
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection") ?? throw new InvalidOperationException("Connection string not found")));
-
-// Register JWT Service
-builder.Services.AddScoped<IJwtService, JwtService>();
-
-// Configure JWT Authentication
-var jwtSettings = builder.Configuration.GetSection("JwtSettings");
-var secretKey = jwtSettings["SecretKey"];
-
-builder.Services.AddAuthentication(options =>
+try
 {
-    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-})
-.AddJwtBearer(options =>
-{
-    options.TokenValidationParameters = new TokenValidationParameters
+    var builder = WebApplication.CreateBuilder(args);
+
+    // Add NLog
+    builder.Host.UseNLog();
+    builder.Services.AddSingleton<IEmailService, EmailService>();
+    builder.Services.AddSingleton<IEmailQueue, EmailQueue>();
+    builder.Services.AddHostedService<EmailWorkerService>();
+    // Add DbContext with SQL Server
+    builder.Services.AddDbContext<AppDbContext>(options =>
+        options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection") ?? throw new InvalidOperationException("Connection string not found")));
+
+    // Register JWT Service
+    builder.Services.AddScoped<IJwtService, JwtService>();
+
+    // Configure JWT Authentication
+    var jwtSettings = builder.Configuration.GetSection("JwtSettings");
+    var secretKey = jwtSettings["SecretKey"];
+
+    builder.Services.AddAuthentication(options =>
     {
-        ValidateIssuerSigningKey = true,
-        IssuerSigningKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(secretKey!)),
-        ValidateIssuer = true,
-        ValidIssuer = jwtSettings["Issuer"],
-        ValidateAudience = true,
-        ValidAudience = jwtSettings["Audience"],
-        ValidateLifetime = true,
-        ClockSkew = TimeSpan.Zero
-    };
-});
+        options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+        options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+    })
+    .AddJwtBearer(options =>
+    {
+        options.TokenValidationParameters = new TokenValidationParameters
+        {
+            ValidateIssuerSigningKey = true,
+            IssuerSigningKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(secretKey!)),
+            ValidateIssuer = true,
+            ValidIssuer = jwtSettings["Issuer"],
+            ValidateAudience = true,
+            ValidAudience = jwtSettings["Audience"],
+            ValidateLifetime = true,
+            ClockSkew = TimeSpan.Zero
+        };
+    });
 
-builder.Services.AddAuthorization();
+    builder.Services.AddAuthorization();
 
-builder.Services.AddControllers();
-builder.Services.AddSwaggerGen();
+    builder.Services.AddControllers();
+    builder.Services.AddSwaggerGen();
 
-var app = builder.Build();
+    var app = builder.Build();
 
->>>>>>> main
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
+    if (app.Environment.IsDevelopment())
+    {
+        app.UseSwagger();
+        app.UseSwaggerUI();
+    }
+
+    app.UseAuthentication();
+    app.UseAuthorization();
+
+    app.MapControllers();
+
+    app.Run();
 }
-
-<<<<<<< HEAD
-app.UseHttpsRedirection();
-=======
-app.UseAuthentication();
-app.UseAuthorization();
-
->>>>>>> main
-app.MapControllers();
-
-app.Run();
+catch (Exception exception)
+{
+    // NLog: catch setup errors
+    logger.Error(exception, "Stopped program because of exception");
+    throw;
+}
+finally
+{
+    // Ensure to flush and stop internal timers/threads before application-exit (Avoid segmentation fault on Linux)
+    NLog.LogManager.Shutdown();
+}
