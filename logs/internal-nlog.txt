@@ -1,0 +1,147 @@
+2025-11-01 09:09:37.0539 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2025-11-01 09:09:37.0653 Info Registered target NLog.Targets.FileTarget(Name=error)
+2025-11-01 09:09:37.0653 Info NLog, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.0.5.4631. Product version: 6.0.5+a023270f66a9445456a70c06668acabe7179c723. GlobalAssemblyCache: False
+2025-11-01 09:09:37.1022 Info Configuration initialized: TargetNames=allfile, error, ConfigItems=49, AutoReload=true, FilePath=C:\Code\API\23ct112-aspnetcore\bin\Debug\net8.0\nlog.config
+2025-11-01 09:09:56.1093 Info LogFactory shutting down ...
+2025-11-01 09:09:56.1093 Info Closing old configuration.
+2025-11-01 09:09:56.1149 Info LogFactory shutdown completed.
+2025-11-01 09:10:32.1282 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2025-11-01 09:10:32.1349 Info Registered target NLog.Targets.FileTarget(Name=error)
+2025-11-01 09:10:32.1349 Info NLog, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.0.5.4631. Product version: 6.0.5+a023270f66a9445456a70c06668acabe7179c723. GlobalAssemblyCache: False
+2025-11-01 09:10:32.1601 Info Configuration initialized: TargetNames=allfile, error, ConfigItems=49, AutoReload=true, FilePath=C:\Code\API\23ct112-aspnetcore\bin\Debug\net8.0\nlog.config
+2025-11-01 09:10:37.1295 Info LogFactory shutting down ...
+2025-11-01 09:10:37.1295 Info Closing old configuration.
+2025-11-01 09:10:37.1295 Info LogFactory shutdown completed.
+2025-11-01 09:10:48.1966 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2025-11-01 09:10:48.2053 Info Registered target NLog.Targets.FileTarget(Name=error)
+2025-11-01 09:10:48.2053 Info NLog, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.0.5.4631. Product version: 6.0.5+a023270f66a9445456a70c06668acabe7179c723. GlobalAssemblyCache: False
+2025-11-01 09:10:48.2361 Info Configuration initialized: TargetNames=allfile, error, ConfigItems=49, AutoReload=true, FilePath=C:\Code\API\23ct112-aspnetcore\bin\Debug\net8.0\nlog.config
+2025-11-01 09:11:28.0092 Info LogFactory shutting down ...
+2025-11-01 09:11:28.0092 Info Closing old configuration.
+2025-11-01 09:11:28.0092 Info LogFactory shutdown completed.
+2025-11-01 09:12:44.3769 Info Loading assembly name: NLog.Web.AspNetCore
+2025-11-01 09:12:44.3769 Info NLog.Web.AspNetCore, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.0.5.1338. Product version: 6.0.5+b09bc1b0e23fde05ae2902ce039e8fa228c3e181. GlobalAssemblyCache: False
+2025-11-01 09:12:44.4177 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2025-11-01 09:12:44.4177 Info Registered target NLog.Targets.FileTarget(Name=error)
+2025-11-01 09:12:44.4177 Info NLog, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.0.5.4631. Product version: 6.0.5+a023270f66a9445456a70c06668acabe7179c723. GlobalAssemblyCache: False
+2025-11-01 09:12:44.4468 Info Configuration initialized: TargetNames=allfile, error, ConfigItems=49, AutoReload=true, FilePath=C:\Code\API\23ct112-aspnetcore\bin\Debug\net8.0\nlog.config
+2025-11-01 09:38:40.8783 Info LogFactory shutting down ...
+2025-11-01 09:38:40.8783 Info Closing old configuration.
+2025-11-01 09:38:40.8783 Info LogFactory shutdown completed.
+2025-11-01 09:39:21.9594 Info Loading assembly name: NLog.Web.AspNetCore
+2025-11-01 09:39:21.9686 Info NLog.Web.AspNetCore, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.0.5.1338. Product version: 6.0.5+b09bc1b0e23fde05ae2902ce039e8fa228c3e181. GlobalAssemblyCache: False
+2025-11-01 09:39:22.0038 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2025-11-01 09:39:22.0038 Info Registered target NLog.Targets.FileTarget(Name=error)
+2025-11-01 09:39:22.0038 Info NLog, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.0.5.4631. Product version: 6.0.5+a023270f66a9445456a70c06668acabe7179c723. GlobalAssemblyCache: False
+2025-11-01 09:39:22.0345 Info Configuration initialized: TargetNames=allfile, error, ConfigItems=49, AutoReload=true, FilePath=C:\Code\API\23ct112-aspnetcore\bin\Debug\net8.0\nlog.config
+2025-11-01 09:39:34.5786 Info LogFactory shutting down ...
+2025-11-01 09:39:34.5786 Info Closing old configuration.
+2025-11-01 09:39:34.5786 Info LogFactory shutdown completed.
+2025-11-01 09:41:28.5760 Info Loading assembly name: NLog.Web.AspNetCore
+2025-11-01 09:41:28.5849 Info NLog.Web.AspNetCore, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.0.5.1338. Product version: 6.0.5+b09bc1b0e23fde05ae2902ce039e8fa228c3e181. GlobalAssemblyCache: False
+2025-11-01 09:41:28.6180 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2025-11-01 09:41:28.6180 Info Registered target NLog.Targets.FileTarget(Name=error)
+2025-11-01 09:41:28.6180 Info NLog, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.0.5.4631. Product version: 6.0.5+a023270f66a9445456a70c06668acabe7179c723. GlobalAssemblyCache: False
+2025-11-01 09:41:28.6517 Info Configuration initialized: TargetNames=allfile, error, ConfigItems=49, AutoReload=true, FilePath=C:\Code\API\23ct112-aspnetcore\bin\Debug\net8.0\nlog.config
+2025-11-01 09:42:20.0641 Info LogFactory shutting down ...
+2025-11-01 09:42:20.0641 Info Closing old configuration.
+2025-11-01 09:42:20.0641 Info LogFactory shutdown completed.
+2025-11-01 09:44:52.4203 Info Loading assembly name: NLog.Web.AspNetCore
+2025-11-01 09:44:52.4282 Info NLog.Web.AspNetCore, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.0.5.1338. Product version: 6.0.5+b09bc1b0e23fde05ae2902ce039e8fa228c3e181. GlobalAssemblyCache: False
+2025-11-01 09:44:52.4620 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2025-11-01 09:44:52.4620 Info Registered target NLog.Targets.FileTarget(Name=error)
+2025-11-01 09:44:52.4620 Info NLog, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.0.5.4631. Product version: 6.0.5+a023270f66a9445456a70c06668acabe7179c723. GlobalAssemblyCache: False
+2025-11-01 09:44:52.4918 Info Configuration initialized: TargetNames=allfile, error, ConfigItems=49, AutoReload=true, FilePath=C:\Code\API\23ct112-aspnetcore\bin\Debug\net8.0\nlog.config
+2025-11-01 09:59:15.5678 Info LogFactory shutting down ...
+2025-11-01 09:59:15.5678 Info Closing old configuration.
+2025-11-01 09:59:15.5678 Info LogFactory shutdown completed.
+2025-11-07 21:33:07.9060 Info Loading assembly name: NLog.Web.AspNetCore
+2025-11-07 21:33:07.9180 Info NLog.Web.AspNetCore, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.0.5.1338. Product version: 6.0.5+b09bc1b0e23fde05ae2902ce039e8fa228c3e181. GlobalAssemblyCache: False
+2025-11-07 21:33:08.0791 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2025-11-07 21:33:08.0791 Info Registered target NLog.Targets.FileTarget(Name=error)
+2025-11-07 21:33:08.0849 Info NLog, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.0.5.4631. Product version: 6.0.5+a023270f66a9445456a70c06668acabe7179c723. GlobalAssemblyCache: False
+2025-11-07 21:33:08.1289 Info Configuration initialized: TargetNames=allfile, error, ConfigItems=49, AutoReload=true, FilePath=C:\Code\API\23ct112-aspnetcore\bin\Debug\net8.0\nlog.config
+2025-11-07 21:43:11.2689 Info LogFactory shutting down ...
+2025-11-07 21:43:11.2689 Info Closing old configuration.
+2025-11-07 21:43:11.2829 Info LogFactory shutdown completed.
+2025-11-07 21:43:20.8643 Info Loading assembly name: NLog.Web.AspNetCore
+2025-11-07 21:43:20.8803 Info NLog.Web.AspNetCore, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.0.5.1338. Product version: 6.0.5+b09bc1b0e23fde05ae2902ce039e8fa228c3e181. GlobalAssemblyCache: False
+2025-11-07 21:43:21.0620 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2025-11-07 21:43:21.0620 Info Registered target NLog.Targets.FileTarget(Name=error)
+2025-11-07 21:43:21.0620 Info NLog, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.0.5.4631. Product version: 6.0.5+a023270f66a9445456a70c06668acabe7179c723. GlobalAssemblyCache: False
+2025-11-07 21:43:21.1118 Info Configuration initialized: TargetNames=allfile, error, ConfigItems=49, AutoReload=true, FilePath=C:\Code\API\23ct112-aspnetcore\bin\Debug\net8.0\nlog.config
+2025-11-07 21:46:38.4415 Info LogFactory shutting down ...
+2025-11-07 21:46:38.4415 Info Closing old configuration.
+2025-11-07 21:46:38.4415 Info LogFactory shutdown completed.
+2025-11-07 21:46:41.7801 Info Loading assembly name: NLog.Web.AspNetCore
+2025-11-07 21:46:41.7801 Info NLog.Web.AspNetCore, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.0.5.1338. Product version: 6.0.5+b09bc1b0e23fde05ae2902ce039e8fa228c3e181. GlobalAssemblyCache: False
+2025-11-07 21:46:41.8173 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2025-11-07 21:46:41.8173 Info Registered target NLog.Targets.FileTarget(Name=error)
+2025-11-07 21:46:41.8173 Info NLog, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.0.5.4631. Product version: 6.0.5+a023270f66a9445456a70c06668acabe7179c723. GlobalAssemblyCache: False
+2025-11-07 21:46:41.8441 Info Configuration initialized: TargetNames=allfile, error, ConfigItems=49, AutoReload=true, FilePath=C:\Code\API\23ct112-aspnetcore\bin\Debug\net8.0\nlog.config
+2025-11-07 21:47:51.1766 Info LogFactory shutting down ...
+2025-11-07 21:47:51.1766 Info Closing old configuration.
+2025-11-07 21:47:51.1766 Info LogFactory shutdown completed.
+2025-11-07 21:47:54.1100 Info Loading assembly name: NLog.Web.AspNetCore
+2025-11-07 21:47:54.1100 Info NLog.Web.AspNetCore, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.0.5.1338. Product version: 6.0.5+b09bc1b0e23fde05ae2902ce039e8fa228c3e181. GlobalAssemblyCache: False
+2025-11-07 21:47:54.1505 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2025-11-07 21:47:54.1505 Info Registered target NLog.Targets.FileTarget(Name=error)
+2025-11-07 21:47:54.1560 Info NLog, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.0.5.4631. Product version: 6.0.5+a023270f66a9445456a70c06668acabe7179c723. GlobalAssemblyCache: False
+2025-11-07 21:47:54.1784 Info Configuration initialized: TargetNames=allfile, error, ConfigItems=49, AutoReload=true, FilePath=C:\Code\API\23ct112-aspnetcore\bin\Debug\net8.0\nlog.config
+2025-11-07 21:49:55.8843 Info LogFactory shutting down ...
+2025-11-07 21:49:55.8843 Info Closing old configuration.
+2025-11-07 21:49:55.8886 Info LogFactory shutdown completed.
+2025-11-07 21:50:10.8680 Info Loading assembly name: NLog.Web.AspNetCore
+2025-11-07 21:50:10.8680 Info NLog.Web.AspNetCore, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.0.5.1338. Product version: 6.0.5+b09bc1b0e23fde05ae2902ce039e8fa228c3e181. GlobalAssemblyCache: False
+2025-11-07 21:50:10.9024 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2025-11-07 21:50:10.9024 Info Registered target NLog.Targets.FileTarget(Name=error)
+2025-11-07 21:50:10.9024 Info NLog, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.0.5.4631. Product version: 6.0.5+a023270f66a9445456a70c06668acabe7179c723. GlobalAssemblyCache: False
+2025-11-07 21:50:10.9260 Info Configuration initialized: TargetNames=allfile, error, ConfigItems=49, AutoReload=true, FilePath=C:\Code\API\23ct112-aspnetcore\bin\Debug\net8.0\nlog.config
+2025-11-07 21:51:25.0198 Info LogFactory shutting down ...
+2025-11-07 21:51:25.0198 Info Closing old configuration.
+2025-11-07 21:51:25.0198 Info LogFactory shutdown completed.
+2025-11-07 21:52:53.0805 Info Loading assembly name: NLog.Web.AspNetCore
+2025-11-07 21:52:53.0805 Info NLog.Web.AspNetCore, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.0.5.1338. Product version: 6.0.5+b09bc1b0e23fde05ae2902ce039e8fa228c3e181. GlobalAssemblyCache: False
+2025-11-07 21:52:53.1163 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2025-11-07 21:52:53.1163 Info Registered target NLog.Targets.FileTarget(Name=error)
+2025-11-07 21:52:53.1163 Info NLog, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.0.5.4631. Product version: 6.0.5+a023270f66a9445456a70c06668acabe7179c723. GlobalAssemblyCache: False
+2025-11-07 21:52:53.1410 Info Configuration initialized: TargetNames=allfile, error, ConfigItems=49, AutoReload=true, FilePath=C:\Code\API\23ct112-aspnetcore\bin\Debug\net8.0\nlog.config
+2025-11-07 22:06:14.5937 Info LogFactory shutting down ...
+2025-11-07 22:06:14.5937 Info Closing old configuration.
+2025-11-07 22:06:14.5937 Info LogFactory shutdown completed.
+2025-11-07 22:06:17.7629 Info Loading assembly name: NLog.Web.AspNetCore
+2025-11-07 22:06:17.7705 Info NLog.Web.AspNetCore, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.0.5.1338. Product version: 6.0.5+b09bc1b0e23fde05ae2902ce039e8fa228c3e181. GlobalAssemblyCache: False
+2025-11-07 22:06:17.7988 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2025-11-07 22:06:17.7988 Info Registered target NLog.Targets.FileTarget(Name=error)
+2025-11-07 22:06:17.7988 Info NLog, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.0.5.4631. Product version: 6.0.5+a023270f66a9445456a70c06668acabe7179c723. GlobalAssemblyCache: False
+2025-11-07 22:06:17.8240 Info Configuration initialized: TargetNames=allfile, error, ConfigItems=49, AutoReload=true, FilePath=C:\Code\API\23ct112-aspnetcore\bin\Debug\net8.0\nlog.config
+2025-11-07 22:17:51.7828 Info LogFactory shutting down ...
+2025-11-07 22:17:51.7828 Info Closing old configuration.
+2025-11-07 22:17:51.7828 Info LogFactory shutdown completed.
+2025-11-07 22:19:13.2741 Info Loading assembly name: NLog.Web.AspNetCore
+2025-11-07 22:19:13.2819 Info NLog.Web.AspNetCore, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.0.5.1338. Product version: 6.0.5+b09bc1b0e23fde05ae2902ce039e8fa228c3e181. GlobalAssemblyCache: False
+2025-11-07 22:19:13.3117 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2025-11-07 22:19:13.3136 Info Registered target NLog.Targets.FileTarget(Name=error)
+2025-11-07 22:19:13.3136 Info NLog, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.0.5.4631. Product version: 6.0.5+a023270f66a9445456a70c06668acabe7179c723. GlobalAssemblyCache: False
+2025-11-07 22:19:13.3395 Info Configuration initialized: TargetNames=allfile, error, ConfigItems=49, AutoReload=true, FilePath=C:\Code\API\23ct112-aspnetcore\bin\Debug\net8.0\nlog.config
+2025-11-07 22:21:40.7579 Info LogFactory shutting down ...
+2025-11-07 22:21:40.7579 Info Closing old configuration.
+2025-11-07 22:21:40.7579 Info LogFactory shutdown completed.
+2025-11-07 22:22:25.4940 Info Loading assembly name: NLog.Web.AspNetCore
+2025-11-07 22:22:25.5015 Info NLog.Web.AspNetCore, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.0.5.1338. Product version: 6.0.5+b09bc1b0e23fde05ae2902ce039e8fa228c3e181. GlobalAssemblyCache: False
+2025-11-07 22:22:25.5307 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2025-11-07 22:22:25.5326 Info Registered target NLog.Targets.FileTarget(Name=error)
+2025-11-07 22:22:25.5326 Info NLog, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.0.5.4631. Product version: 6.0.5+a023270f66a9445456a70c06668acabe7179c723. GlobalAssemblyCache: False
+2025-11-07 22:22:25.5565 Info Configuration initialized: TargetNames=allfile, error, ConfigItems=49, AutoReload=true, FilePath=C:\Code\API\23ct112-aspnetcore\bin\Debug\net8.0\nlog.config
+2025-11-07 22:23:48.4985 Info LogFactory shutting down ...
+2025-11-07 22:23:48.4985 Info Closing old configuration.
+2025-11-07 22:23:48.4985 Info LogFactory shutdown completed.
+2025-11-07 22:23:51.7567 Info Loading assembly name: NLog.Web.AspNetCore
+2025-11-07 22:23:51.7651 Info NLog.Web.AspNetCore, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.0.5.1338. Product version: 6.0.5+b09bc1b0e23fde05ae2902ce039e8fa228c3e181. GlobalAssemblyCache: False
+2025-11-07 22:23:51.7960 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2025-11-07 22:23:51.7960 Info Registered target NLog.Targets.FileTarget(Name=error)
+2025-11-07 22:23:51.7960 Info NLog, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.0.5.4631. Product version: 6.0.5+a023270f66a9445456a70c06668acabe7179c723. GlobalAssemblyCache: False
+2025-11-07 22:23:51.8239 Info Configuration initialized: TargetNames=allfile, error, ConfigItems=49, AutoReload=true, FilePath=C:\Code\API\23ct112-aspnetcore\bin\Debug\net8.0\nlog.config
+2025-11-07 22:29:43.2553 Info LogFactory shutting down ...
+2025-11-07 22:29:43.2553 Info Closing old configuration.
+2025-11-07 22:29:43.2696 Info LogFactory shutdown completed.
