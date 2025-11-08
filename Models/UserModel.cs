@@ -2,8 +2,18 @@ namespace LearnApiNetCore.Models
 {
     public class UserModel
     {
-        public int Id { get; set; }
-        public string TenUser { get; set; }
-        public string Email { get; set; }
+        public int id { get; set; }
+
+        public string name { get; set; }
+
+        public bool gender { get; set; }
+
+        public DateTime birthday { get; set; }
+
+        public string phone { get; set; }
+
+        public string email { get; set; }
+
+        public string address { get; set; }
     }
 }
