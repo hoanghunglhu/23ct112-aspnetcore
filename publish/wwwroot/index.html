@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>E-Portfolio — Hồ sơ cá nhân</title>
+  <meta name="description" content="E-portfolio chủ đề xanh gradient — giới thiệu, dự án, kỹ năng và liên hệ." />
+  <style>
+    :root{
+      --bg-start: #e0f2ff;
+      --bg-end: #b3e1ff;
+      --card: rgba(255,255,255,0.85);
+      --accent: #0b7fd1;
+      --muted: #5b6b63;
+      --glass: rgba(255,255,255,0.6);
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+      background:linear-gradient(135deg,var(--bg-start),var(--bg-end));
+      -webkit-font-smoothing:antialiased;color:#123123;
+      line-height:1.5;
+    }
+
+    /* Layout */
+    .container{max-width:1100px;margin:32px auto;padding:24px}
+    header{display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .avatar{width:72px;height:72px;border-radius:14px;overflow:hidden;flex-shrink:0;box-shadow:0 6px 18px rgba(31,157,99,0.18)}
+    .avatar img{width:100%;height:100%;object-fit:cover;display:block}
+    .name{font-size:1.25rem;font-weight:700}
+    nav a{margin-left:12px;text-decoration:none;color:var(--muted);font-weight:600}
+    nav a:hover{color:var(--accent)}
+
+    /* Hero */
+    .hero{display:grid;grid-template-columns:1fr 360px;gap:22px;margin-top:22px}
+    .card{background:var(--card);backdrop-filter: blur(6px);border-radius:16px;padding:18px;box-shadow:0 6px 20px rgba(12,60,30,0.06)}
+    .intro h1{margin:0 0 6px 0;font-size:1.8rem;color:#0d3b1f}
+    .intro p{margin:0 0 12px;color:var(--muted)}
+    .cta{display:flex;gap:10px}
+    .btn{display:inline-block;padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:700}
+    .btn-primary{background:linear-gradient(90deg,#0b7fd1,#0a6bb3);color:#fff}
+    .btn-ghost{background:transparent;border:2px solid rgba(31,157,99,0.12);color:var(--muted)}
+
+    /* Right panel */
+    .stats{display:flex;flex-direction:column;gap:12px}
+    .stat{display:flex;align-items:center;gap:12px}
+    .stat .num{font-weight:800;color:#0b4f29}
+
+    /* Sections */
+    section{margin-top:20px}
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .projects .project{padding:14px;border-radius:12px;background:linear-gradient(180deg,rgba(255,255,255,0.7),rgba(255,255,255,0.85));}
+    .project h3{margin:0 0 6px 0}
+    .skills{display:flex;gap:10px;flex-wrap:wrap}
+    .skill{background:var(--glass);padding:8px 10px;border-radius:999px;font-weight:600}
+
+    footer{margin-top:30px;padding:18px;border-radius:12px;text-align:center;color:var(--muted);font-size:0.95rem}
+
+    /* Responsive */
+    @media (max-width:900px){
+      .hero{grid-template-columns:1fr}
+      .grid-3{grid-template-columns:repeat(1,1fr)}
+      nav{display:none}
+    }
+    /* Hover block glow */
+  .card:hover, .project:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 28px rgba(20,110,160,0.25);
+    transition: 0.25s ease;
+  }
+
+  /* Particle blink */
+  body::before {
+    content:"";
+    position:fixed;
+    top:0;left:0;width:100%;height:100%;
+    pointer-events:none;
+    background:radial-gradient(circle, rgba(255,255,255,0.6) 0%, rgba(255,255,255,0) 60%) 0 0/6px 6px repeat;
+    animation: blink 2s infinite ease-in-out;
+    opacity:0.25;
+  }
+  @keyframes blink {
+    0%,100%{opacity:0.20}
+    50%{opacity:0.45}
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="avatar"><img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="avatar"></div>
+        <div>
+          <div class="name">Nguyễn Văn A</div>
+          <div style="font-size:0.9rem;color:var(--muted)">Web Developer | Designer | Student</div>
+        </div>
+      </div>
+
+      <nav>
+        <a href="#about">Giới thiệu</a>
+        <a href="#projects">Dự án</a>
+        <a href="#skills">Kỹ năng</a>
+        <a href="#contact">Liên hệ</a>
+      </nav>
+    </header>
+
+    <main>
+      <div class="hero">
+        <div class="card intro">
+          <h1>Chào, mình là Nguyễn Văn A 👋</h1>
+          <p>Mình là lập trình viên front-end đam mê UI/UX và phát triển ứng dụng web. Mục tiêu là tạo trải nghiệm người dùng trực quan, nhanh và dễ tiếp cận.</p>
+
+          <div class="cta">
+            <a class="btn btn-primary" href="#contact">Liên hệ</a>
+            <a class="btn btn-ghost" href="#projects">Xem dự án</a>
+          </div>
+
+          <section id="about" style="margin-top:16px">
+            <h3>Thông tin cơ bản</h3>
+            <p style="margin:6px 0;color:var(--muted)"><strong>Họ tên:</strong> Nguyễn Văn A<br>
+            <strong>Địa chỉ:</strong> Hà Nội, Việt Nam<br>
+            <strong>Email:</strong> email@example.com<br>
+            <strong>Mục tiêu nghề nghiệp:</strong> Trở thành full-stack developer, phát triển sản phẩm có ý nghĩa.</p>
+          </section>
+
+          <section style="margin-top:8px">
+            <h3>Tóm tắt</h3>
+            <p style="margin:6px 0;color:var(--muted)">3 năm kinh nghiệm phát triển giao diện, thông thạo HTML/CSS/JS và React. Thích làm việc theo nhóm, code sạch và tối ưu hiệu suất.</p>
+          </section>
+        </div>
+
+        <aside class="card stats">
+          <div style="font-weight:700;color:#0b4f29">Thông tin nhanh</div>
+          <div class="stat"><div class="num">3+</div><div>năm kinh nghiệm</div></div>
+          <div class="stat"><div class="num">15</div><div>dự án</div></div>
+          <div class="stat"><div class="num">Đang tìm việc</div></div>
+
+          <div style="margin-top:10px">
+            <a class="btn btn-primary" href="#" style="width:100%;display:inline-block;text-align:center">Tải CV</a>
+          </div>
+        </aside>
+      </div>
+
+      <section id="projects" class="projects">
+        <h2 style="margin:0 0 12px 0;color:#0b4f29">Dự án tiêu biểu</h2>
+        <div class="grid-3">
+          <div class="project card">
+            <h3>Hệ thống quản lý đề tài</h3>
+            <p class="muted">Gồm đăng nhập, phân quyền, CRUD, báo cáo. HTML/CSS/JS + ASP.NET.</p>
+            <p style="margin:8px 0;font-weight:700">Vai trò: Front-end</p>
+            <a href="#" class="btn btn-ghost">Xem chi tiết</a>
+          </div>
+
+          <div class="project card">
+            <h3>Trang bán hàng</h3>
+            <p class="muted">Shop demo với giỏ hàng, thanh toán ảo, responsive.</p>
+            <p style="margin:8px 0;font-weight:700">Vai trò: Fullstack</p>
+            <a href="#" class="btn btn-ghost">Xem chi tiết</a>
+          </div>
+
+          <div class="project card">
+            <h3>Website cá nhân</h3>
+            <p class="muted">Portfolio tĩnh tối ưu tốc độ, SEO cơ bản.</p>
+            <p style="margin:8px 0;font-weight:700">Vai trò: Thiết kế & Dev</p>
+            <a href="#" class="btn btn-ghost">Xem chi tiết</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="skills">
+        <h2 style="color:#0b4f29">Kỹ năng</h2>
+        <div class="skills" style="margin-top:10px">
+          <span class="skill">HTML</span>
+          <span class="skill">CSS / Sass</span>
+          <span class="skill">JavaScript</span>
+          <span class="skill">React</span>
+          <span class="skill">C# / ASP.NET</span>
+          <span class="skill">SQL</span>
+          <span class="skill">Git</span>
+        </div>
+      </section>
+
+      <section id="contact">
+        <h2 style="color:#0b4f29">Liên hệ</h2>
+        <div class="card" style="margin-top:12px;display:flex;gap:12px;flex-direction:column">
+          <p style="margin:0;color:var(--muted)">Gửi tin nhắn nếu bạn muốn hợp tác hoặc trao đổi công việc.</p>
+
+          <form onsubmit="event.preventDefault();alert('Form giả lập — thay bằng hành động gửi email/axios khi cần.');">
+            <div style="display:flex;gap:10px;flex-wrap:wrap">
+              <input required placeholder="Họ và tên" style="flex:1;padding:10px;border-radius:8px;border:1px solid rgba(0,0,0,0.06)" />
+              <input required placeholder="Email" style="flex:1;padding:10px;border-radius:8px;border:1px solid rgba(0,0,0,0.06)" />
+            </div>
+            <textarea required placeholder="Nội dung" style="margin-top:8px;padding:10px;border-radius:8px;border:1px solid rgba(0,0,0,0.06);min-height:110px"></textarea>
+            <div style="margin-top:8px;display:flex;gap:8px">
+              <button class="btn btn-primary" type="submit">Gửi</button>
+              <button class="btn btn-ghost" type="reset">Xóa</button>
+            </div>
+          </form>
+
+          <div style="margin-top:8px;color:var(--muted);">
+            <strong>Email:</strong> email@example.com &nbsp; • &nbsp; <strong>Phone:</strong> +84 9xx xxx xxx
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer>
+      © <span id="year"></span> Nguyễn Văn A — E-Portfolio. Thiết kế chủ đề gradient xanh.
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Modern Login</title>
+<style>
+  body{
+    margin:0;padding:0;
+    font-family:Arial;
+    background:linear-gradient(135deg,#b3e1ff,#8ac8ff);
+    height:100vh;display:flex;align-items:center;justify-content:center;
+  }
+  .login-box{
+    width:360px;padding:32px;border-radius:18px;
+    background:#fff;box-shadow:0 8px 28px rgba(0,0,0,0.15);
+  }
+  h2{text-align:center;margin-bottom:24px;color:#0b7fd1}
+  .input-group{margin-bottom:18px;display:flex;flex-direction:column}
+  label{font-weight:600;margin-bottom:6px}
+  input{
+    padding:12px;border-radius:10px;border:1px solid #cdd9e3;
+    font-size:15px;
+  }
+  input:focus{outline:2px solid #0b7fd1}
+  .actions{display:flex;justify-content:space-between;margin-bottom:18px;font-size:14px}
+  .btn{
+    width:100%;padding:12px;border:none;border-radius:10px;
+    background:linear-gradient(90deg,#0b7fd1,#0a6bb3);
+    color:#fff;font-size:16px;font-weight:600;cursor:pointer;
+  }
+  .btn:hover{opacity:0.9}
+  .link{text-align:center;margin-top:16px;font-size:14px}
+  .link a{color:#0b7fd1;text-decoration:none;font-weight:600}
+</style>
+</head>
+<body>
+
+<div class="login-box">
+  <h2>Login</h2>
+
+  <div class="input-group">
+    <label>Username</label>
+    <input type="text" id="username" placeholder="Enter username">
+  </div>
+
+  <div class="input-group">
+    <label>Password</label>
+    <input type="password" id="password" placeholder="Enter password">
+  </div>
+
+  <div class="actions">
+    <label><input type="checkbox"> Remember me</label>
+    <a href="#">Forgot password?</a>
+  </div>
+
+  <button class="btn">Login</button>
+
+  <div class="link">Don't have an account? <a href="#">Register</a></div>
+</div>
+
+<script>
+    document.querySelector('.btn').addEventListener('click', async () => {
+        const username = document.getElementById('username').value;
+        const password = document.getElementById('password').value;
+    
+        if(!username || !password){
+            alert('Vui lòng nhập đầy đủ thông tin!');
+            return;
+        }
+    
+        try {
+            const response = await fetch('/api/auth/login', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ username, password })
+            });
+    
+            const data = await response.json();
+    
+            if(response.ok){
+                alert('Đăng nhập thành công!\nToken:\n' + data.token);
+                localStorage.setItem('jwt', data.token); // lưu token nếu muốn
+                // chuyển hướng sang trang khác nếu cần
+                window.location.href = '/index.html';
+            } else {
+                alert(data.message);
+            }
+        } catch (err) {
+            console.error(err);
+            alert('Có lỗi xảy ra khi đăng nhập!');
+        }
+    });
+    </script>
+</body>
+</html>

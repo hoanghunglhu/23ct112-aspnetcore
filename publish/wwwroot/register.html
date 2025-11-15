@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Register</title>
+<style>
+  body{
+    margin:0; padding:0;
+    font-family: Arial, sans-serif;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background: linear-gradient(135deg,#b3e1ff,#0b7fd1);
+  }
+  .register-box{
+    width:360px;
+    padding:32px;
+    border-radius:18px;
+    background:rgba(255,255,255,0.9);
+    box-shadow:0 8px 28px rgba(0,0,0,0.15);
+  }
+  h2{
+    text-align:center;
+    margin-bottom:24px;
+    color:#0a6bb3;
+  }
+  .input-group{
+    margin-bottom:18px;
+    display:flex;
+    flex-direction:column;
+  }
+  label{
+    font-weight:600;
+    margin-bottom:6px;
+  }
+  input{
+    padding:12px;
+    border-radius:10px;
+    border:1px solid #cdd9e3;
+    font-size:15px;
+  }
+  input:focus{outline:2px solid #0a6bb3;}
+  .btn{
+    width:100%;
+    padding:12px;
+    border:none;
+    border-radius:10px;
+    background:linear-gradient(90deg,#0b7fd1,#0a6bb3);
+    color:#fff;
+    font-size:16px;
+    font-weight:600;
+    cursor:pointer;
+  }
+  .btn:hover{opacity:0.9;}
+  .link{text-align:center;margin-top:16px;font-size:14px}
+  .link a{color:#0a6bb3;text-decoration:none;font-weight:600}
+</style>
+</head>
+<body>
+
+<div class="register-box">
+  <h2>Register</h2>
+
+  <div class="input-group">
+    <label>Username</label>
+    <input type="text" id="username" placeholder="Enter username">
+  </div>
+
+  <div class="input-group">
+    <label>Email</label>
+    <input type="email" id="email" placeholder="Enter email">
+  </div>
+
+  <div class="input-group">
+    <label>Password</label>
+    <input type="password" id="password" placeholder="Enter password">
+  </div>
+
+  <div class="input-group">
+    <label>Confirm Password</label>
+    <input type="password" id="confirmPassword" placeholder="Confirm password">
+  </div>
+
+  <button class="btn">Register</button>
+
+  <div class="link">Already have an account? <a href="login.html">Login</a></div>
+</div>
+
+<script>
+document.querySelector('.btn').addEventListener('click', async () => {
+    const username = document.getElementById('username').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const password = document.getElementById('password').value;
+    const confirmPassword = document.getElementById('confirmPassword').value;
+
+    if(!username || !email || !password || !confirmPassword){
+        alert('Vui lòng nhập đầy đủ thông tin!');
+        return;
+    }
+
+    if(password !== confirmPassword){
+        alert('Mật khẩu xác nhận không khớp!');
+        return;
+    }
+
+    try {
+        // Gửi request POST tới API register (chưa có backend)
+        const response = await fetch('/api/auth/register', {
+            method: 'POST',
+            headers: {'Content-Type':'application/json'},
+            body: JSON.stringify({username,email,password})
+        });
+
+        const data = await response.json();
+
+        if(response.ok){
+            alert('Đăng ký thành công! Vui lòng đăng nhập.');
+            window.location.href = 'login.html';
+        } else {
+            alert(data.message || 'Có lỗi xảy ra!');
+        }
+    } catch(err){
+        console.error(err);
+        alert('Có lỗi xảy ra khi đăng ký!');
+    }
+});
+</script>
+
+</body>
+</html>
