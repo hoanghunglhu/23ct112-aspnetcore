@@ -9,23 +9,30 @@ try
     logger.Info("Starting application...");
 
     var builder = WebApplication.CreateBuilder(args);
+    builder.Environment.WebRootPath = Path.Combine(builder.Environment.ContentRootPath, "wwwroot");
 
-    // ✅ Cấu hình NLog
+
+    // Logging
     builder.Logging.ClearProviders();
     builder.Host.UseNLog();
 
-    // ✅ Add DbContext with SQL Server
+    // DbContext
     builder.Services.AddDbContext<AppDbContext>(options =>
         options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-    // ✅ Add controllers và Swagger
+    // Controllers + Swagger
     builder.Services.AddControllers();
     builder.Services.AddEndpointsApiExplorer();
     builder.Services.AddSwaggerGen();
 
     var app = builder.Build();
 
-    // ✅ Swagger chỉ bật khi môi trường là Development
+    // 🔥 Bật dùng file tĩnh (HTML, CSS, JS)
+    app.UseDefaultFiles(); 
+ // dùng index.html mặc định
+    app.UseStaticFiles();   // cho phép truy cập wwwroot
+
+    // Swagger
     if (app.Environment.IsDevelopment())
     {
         app.UseSwagger();
@@ -33,6 +40,7 @@ try
     }
 
     app.MapControllers();
+
     app.Run();
 }
 catch (Exception ex)
