@@ -1,0 +1,400 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Họ và tên — E‑Portfolio</title>
+  <meta name="description" content="E-portfolio chuyên nghiệp màu neon tối—Giới thiệu, Kỹ năng, Dự án, Kinh nghiệm, Liên hệ." />
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <!-- Icons (only for visuals) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    :root{
+      --bg:#0b0f13; /* very dark */
+      --panel: rgba(255,255,255,0.03);
+      --glass: rgba(255,255,255,0.04);
+      --neon-cyan: #00f0ff;
+      --neon-magenta: #ff2ec4;
+      --neon-lime: #70ff6b;
+      --muted: #9aa4ad;
+      --glass-border: rgba(255,255,255,0.06);
+      font-synthesis: none;
+    }
+
+    *{box-sizing:border-box}
+    html,body{
+      margin:0; font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;
+      background: var(--bg);
+      animation: neonMove 14s linear infinite;
+      color:#e6f2ff; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
+      line-height:1.45; -webkit-tap-highlight-color: transparent;
+    }
+
+    .container{max-width:1100px;margin:40px auto;padding:28px;}
+    header{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;}
+
+    .brand{display:flex;align-items:center;gap:14px}
+    .logo{
+      width:64px;height:64px;border-radius:12px;background:linear-gradient(135deg,var(--neon-cyan),var(--neon-magenta));
+      box-shadow:0 6px 30px rgba(0,0,0,0.6), 0 0 18px rgba(0,240,255,0.08);
+      display:flex;align-items:center;justify-content:center;font-weight:700;color:#071019;font-size:20px
+    }
+    .name-title{display:flex;flex-direction:column}
+    .name-title strong{font-size:18px;letter-spacing:0.3px}
+    .name-title span{font-size:13px;color:var(--muted)}
+
+    nav{display:flex;align-items:center;gap:12px;flex-wrap:wrap;}
+    nav a{color:var(--muted);text-decoration:none;font-weight:600}
+    nav a:hover{color:var(--neon-cyan)}
+
+    .user-info{display:flex;align-items:center;gap:12px;padding:8px 16px;background:var(--panel);border-radius:10px;border:1px solid var(--glass-border);}
+    .user-avatar{width:36px;height:36px;border-radius:8px;background:linear-gradient(135deg,var(--neon-cyan),var(--neon-magenta));display:flex;align-items:center;justify-content:center;font-weight:700;color:#071019;font-size:14px;}
+    .user-name{font-weight:600;font-size:14px;}
+
+    main{display:grid;grid-template-columns:1fr 360px;gap:28px;margin-top:28px}
+
+    /* LEFT: CONTENT */
+    .card{background:var(--panel);border-radius:14px;padding:22px;border:1px solid var(--glass-border);backdrop-filter:blur(6px)}
+    .hero{padding:36px 28px;border-radius:14px;position:relative;overflow:hidden}
+    .hero h1{margin:0;font-size:32px;line-height:1.02}
+    .hero p{color:var(--muted);margin:12px 0 18px}
+    .tagline{display:inline-flex;gap:10px;align-items:center;background:linear-gradient(90deg, rgba(0,240,255,0.06), rgba(255,46,196,0.03));padding:8px 12px;border-radius:999px;font-weight:600;color:var(--neon-cyan)}
+
+    .cta{display:flex;gap:12px;margin-top:12px}
+    .btn{padding:10px 16px;border-radius:10px;border:1px solid transparent;font-weight:700;cursor:pointer;text-decoration:none;display:inline-block;}
+    .btn-primary{background:linear-gradient(90deg,var(--neon-cyan),var(--neon-magenta));color:#071019;box-shadow:0 8px 30px rgba(0,240,255,0.06)}
+    .btn-ghost{background:transparent;border:1px solid var(--glass-border);color:var(--neon-cyan)}
+    .btn-danger{background:linear-gradient(90deg,#ff2e2e,#ff6b6b);color:#fff;}
+
+    .skills{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}
+    .skill{padding:8px 12px;border-radius:999px;background:linear-gradient(90deg, rgba(255,255,255,0.02), transparent);border:1px solid rgba(255,255,255,0.02);color:var(--muted);font-weight:600}
+
+    h2.section-title{display:flex;align-items:center;gap:12px;margin:0 0 14px;font-size:16px}
+    hr.sep{border:none;border-top:1px solid rgba(255,255,255,0.03);margin:18px 0}
+
+    .projects{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+    .project{border-radius:10px;padding:12px;background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);border:1px solid rgba(255,255,255,0.02)}
+    .project h3{margin:0 0 6px;font-size:15px}
+    .project p{margin:0;color:var(--muted);font-size:13px}
+
+    .timeline{display:flex;flex-direction:column;gap:12px}
+    .timeline-item{padding:12px;border-radius:10px;background:linear-gradient(90deg, rgba(255,255,255,0.02), transparent);border-left:4px solid var(--neon-magenta)}
+    .timeline-item small{color:var(--muted)}
+
+    /* RIGHT: SIDEBAR */
+    aside{position:relative}
+    .profile{display:flex;flex-direction:column;align-items:center;text-align:center;gap:12px;padding:22px}
+    .avatar{width:140px;height:140px;border-radius:18px;background:linear-gradient(135deg,var(--neon-cyan),var(--neon-magenta));display:flex;align-items:center;justify-content:center;font-size:48px;color:#071019;font-weight:800;box-shadow:0 10px 40px rgba(0,0,0,0.6)}
+    .contact{display:flex;flex-direction:column;gap:8px;margin-top:12px}
+    .contact a{color:var(--muted);text-decoration:none}
+    .contact a:hover{color:var(--neon-lime)}
+
+    .tag-glow{position:absolute;right:-70px;top:-40px;width:260px;height:260px;border-radius:50%;filter:blur(40px);opacity:0.14;background:linear-gradient(135deg,var(--neon-magenta),var(--neon-cyan))}
+
+    footer{margin-top:36px;text-align:center;color:var(--muted);font-size:13px}
+
+    /* responsive */
+    @media (max-width:980px){
+      main{grid-template-columns:1fr;}
+      aside{order:2}
+      .projects{grid-template-columns:1fr;}
+    }
+
+    /* subtle interactive neon focus */
+    a,button,input,textarea{outline:none}
+    input:focus,textarea:focus,button:focus{box-shadow:0 0 18px rgba(0,240,255,0.06);border-color:rgba(0,240,255,0.12)}
+
+    /* small animations */
+    .glowPulse{animation:glow 4s ease-in-out infinite}
+    @keyframes glow{0%{transform:translateY(0) scale(1)}50%{transform:translateY(-6px) scale(1.01)}100%{transform:translateY(0) scale(1)}}
+
+    /* fade-in-up animation */
+    @keyframes fadeInUp {0%{opacity:0;transform:translateY(20px);}100%{opacity:1;transform:translateY(0);}}
+    .fadeInUp{opacity:0;animation:fadeInUp .8s ease forwards;}
+    /* staggerable delays */
+    .delay-1{animation-delay:.1s}
+    .delay-2{animation-delay:.2s}
+    .delay-3{animation-delay:.3s}
+    .delay-4{animation-delay:.4s}
+    .delay-5{animation-delay:.5s}
+
+    /* animated neon gradient background */
+    @keyframes neonMove {
+      0% {
+        background: radial-gradient(1200px 600px at 10% 10%, rgba(0,240,255,0.10), transparent 65%),
+                    radial-gradient(900px 400px at 90% 90%, rgba(255,46,196,0.10), transparent 65%),
+                    var(--bg);
+      }
+      50% {
+        background: radial-gradient(1200px 600px at 80% 20%, rgba(0,240,255,0.10), transparent 65%),
+                    radial-gradient(900px 400px at 20% 80%, rgba(255,46,196,0.10), transparent 65%),
+                    var(--bg);
+      }
+      100% {
+        background: radial-gradient(1200px 600px at 10% 10%, rgba(0,240,255,0.10), transparent 65%),
+                    radial-gradient(900px 400px at 90% 90%, rgba(255,46,196,0.10), transparent 65%),
+                    var(--bg);
+      }
+    }
+
+    /* Neon floating orbs */
+    .neon-orb{
+      position:fixed;
+      width:260px;height:260px;
+      border-radius:50%;
+      filter:blur(70px);
+      opacity:0.22;
+      z-index:-1;
+      animation: orbMove 18s ease-in-out infinite;
+    }
+    .orb-1{background:var(--neon-cyan);top:10%;left:5%;animation-duration:16s}
+    .orb-2{background:var(--neon-magenta);top:60%;left:70%;animation-duration:22s}
+    .orb-3{background:var(--neon-lime);top:30%;left:40%;animation-duration:20s}
+
+    @keyframes orbMove {
+      0%   { transform: translateX(0)    translateY(0)     scale(1); }
+      25%  { transform: translateX(80px) translateY(-40px) scale(1.05); }
+      50%  { transform: translateX(0)    translateY(40px)  scale(0.97); }
+      75%  { transform: translateX(-80px) translateY(-20px) scale(1.06); }
+      100% { transform: translateX(0)    translateY(0)     scale(1); }
+    }
+
+    /* cursor neon glow */
+    .cursor-glow{
+      position:fixed;
+      width:180px;height:180px;
+      border-radius:50%;
+      pointer-events:none;
+      background:radial-gradient(circle, rgba(0,240,255,0.25), transparent 70%);
+      filter:blur(60px);
+      transform:translate(-50%,-50%);
+      z-index:-1;
+    }
+
+    /* card hover neon lift */
+    .card:hover{
+      transform:translateY(-6px);
+      transition:0.35s ease;
+      box-shadow:0 0 20px rgba(0,240,255,0.08),0 0 40px rgba(255,46,196,0.06);
+    }
+
+    #auth-buttons{display:flex;gap:8px;align-items:center;}
+  </style>
+</head>
+<body>
+  <div class="cursor-glow" id="cursorGlow"></div>
+  <div class="neon-orb orb-1"></div>
+  <div class="neon-orb orb-2"></div>
+  <div class="neon-orb orb-3"></div>
+  
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">HZ</div>
+        <div class="name-title">
+          <strong>Họ Tên Người Dùng</strong>
+          <span>Frontend Developer • Thiết kế UI • Freelancer</span>
+        </div>
+      </div>
+      <nav>
+        <a href="#about">Giới thiệu</a>
+        <a href="#projects">Dự án</a>
+        <a href="#experience">Kinh nghiệm</a>
+        <a href="#contact">Liên hệ</a>
+        
+        <!-- Auth buttons - will be replaced by JavaScript -->
+        <div id="auth-buttons">
+          <a href="login.html" class="btn btn-ghost">Đăng nhập</a>
+          <a href="register.html" class="btn btn-primary">Đăng ký</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section>
+        <div class="card hero fadeInUp delay-1">
+          <div class="tagline">Neon Dark E‑Portfolio</div>
+          <h1 class="glowPulse">Xin chào — Tôi là Họ Tên, xây dựng trải nghiệm số đẹp và nhanh.</h1>
+          <p>Tôi là một lập trình viên/nhà thiết kế với kinh nghiệm xây dựng ứng dụng web, giao diện người dùng và thương hiệu kỹ thuật số. Tôi ưu tiên code sạch, thiết kế có ý nghĩa và hiệu suất.</p>
+
+          <div class="cta">
+            <a class="btn btn-primary" href="#contact">Tải CV</a>
+            <a class="btn btn-ghost" href="#projects">Xem dự án</a>
+          </div>
+
+          <div class="skills" aria-label="Kỹ năng">
+            <div class="skill">HTML &amp; CSS</div>
+            <div class="skill">JavaScript / TypeScript</div>
+            <div class="skill">React / Vue</div>
+            <div class="skill">UI/UX Design</div>
+            <div class="skill">Node.js</div>
+            <div class="skill">Responsive Design</div>
+          </div>
+
+          <hr class="sep" />
+
+          <h2 class="section-title">Tổng quan</h2>
+          <p style="color:var(--muted)">Tôi chuyên phát triển web front‑end với hiệu suất cao, hỗ trợ UX dễ tiếp cận và giao diện nổi bật. Dưới đây là một số dự án tiêu biểu và kinh nghiệm của tôi.</p>
+        </div>
+
+        <div class="card fadeInUp delay-2" style="margin-top:18px">
+          <h2 class="section-title">Dự án nổi bật</h2>
+          <div class="projects">
+            <article class="project">
+              <h3>Hệ thống bán hàng (WinForms)</h3>
+              <p>Ứng dụng quản lý bán hàng với báo cáo, quản lý kho và in ấn. Công nghệ: C#, SQL Server.</p>
+            </article>
+            <article class="project">
+              <h3>Trang thương mại điện tử</h3>
+              <p>Frontend React + Tailwind, backend Node.js. Tối ưu SEO và tốc độ.</p>
+            </article>
+            <article class="project">
+              <h3>Portfolio cá nhân</h3>
+              <p>Thiết kế tương tác, animation nhẹ, responsive trên mọi thiết bị.</p>
+            </article>
+            <article class="project">
+              <h3>Dashboard phân tích</h3>
+              <p>Báo cáo động, biểu đồ, export CSV/PDF — BI lightweight cho SMEs.</p>
+            </article>
+          </div>
+        </div>
+
+        <div class="card fadeInUp delay-2" style="margin-top:18px">
+          <h2 class="section-title">Kinh nghiệm &amp; Học vấn</h2>
+          <div class="timeline">
+            <div class="timeline-item">
+              <strong>Frontend Developer — Công ty ABC</strong>
+              <div><small>2022 — Nay</small></div>
+              <p style="margin:8px 0;color:var(--muted)">Xây dựng SPA, tối ưu tốc độ, phối hợp với team thiết kế để triển khai UI/UX.</p>
+            </div>
+
+            <div class="timeline-item">
+              <strong>Kỹ sư phần mềm — Công ty XYZ</strong>
+              <div><small>2020 — 2022</small></div>
+              <p style="margin:8px 0;color:var(--muted)">Phát triển backend nhẹ, tích hợp API, viết unit test.</p>
+            </div>
+
+            <div class="timeline-item">
+              <strong>Cử nhân CNTT — Trường Đại học Q</strong>
+              <div><small>2016 — 2020</small></div>
+              <p style="margin:8px 0;color:var(--muted)">Mạng máy tính, lập trình, cơ sở dữ liệu.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <aside>
+        <div class="card profile fadeInUp delay-3">
+          <div class="avatar">HZ</div>
+          <div>
+            <strong>Họ Tên Người Dùng</strong>
+            <div style="color:var(--muted);font-size:13px;margin-top:6px">Frontend Developer • UI/UX • Freelancer</div>
+          </div>
+
+          <div class="contact">
+            <a href="mailto:you@example.com"><i class="fa-regular fa-envelope"></i> you@example.com</a>
+            <a href="tel:+84123456789"><i class="fa-solid fa-phone"></i> +84 123 456 789</a>
+            <a href="#"><i class="fa-brands fa-github"></i> github.com/username</a>
+            <a href="#"><i class="fa-brands fa-linkedin"></i> linkedin.com/in/username</a>
+          </div>
+        </div>
+
+        <div class="card" style="margin-top:16px;padding:18px">
+          <h2 class="section-title">Kỹ năng kỹ thuật</h2>
+          <div style="display:flex;flex-direction:column;gap:8px">
+            <div style="display:flex;justify-content:space-between;align-items:center"><span>HTML/CSS</span><strong>95%</strong></div>
+            <div style="height:8px;background:#081018;border-radius:8px;overflow:hidden;border:1px solid rgba(255,255,255,0.02)"><div style="height:100%;width:95%;background:linear-gradient(90deg,var(--neon-cyan),var(--neon-magenta));border-radius:8px"></div></div>
+            <div style="display:flex;justify-content:space-between;align-items:center"><span>JavaScript</span><strong>88%</strong></div>
+            <div style="height:8px;background:#081018;border-radius:8px;overflow:hidden;border:1px solid rgba(255,255,255,0.02)"><div style="height:100%;width:88%;background:linear-gradient(90deg,var(--neon-magenta),var(--neon-lime));border-radius:8px"></div></div>
+            <div style="display:flex;justify-content:space-between;align-items:center"><span>React</span><strong>85%</strong></div>
+            <div style="height:8px;background:#081018;border-radius:8px;overflow:hidden;border:1px solid rgba(255,255,255,0.02)"><div style="height:100%;width:85%;background:linear-gradient(90deg,var(--neon-cyan),var(--neon-lime));border-radius:8px"></div></div>
+          </div>
+        </div>
+
+        <div class="tag-glow"></div>
+      </aside>
+    </main>
+
+    <footer>
+      © <span id="year"></span> Họ Tên — Thiết kế &amp; phát triển. • <a href="#contact" style="color:var(--neon-cyan);text-decoration:none">Liên hệ</a>
+    </footer>
+  </div>
+
+  <script>
+    // Set year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Check login status and update UI
+    function updateAuthUI() {
+      const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
+      const authButtons = document.getElementById('auth-buttons');
+      
+      if (isLoggedIn) {
+        const user = JSON.parse(localStorage.getItem('user') || '{}');
+        const userName = user.name || 'User';
+        const userInitials = userName.split(' ').map(n => n[0]).slice(0, 2).join('').toUpperCase();
+        
+        authButtons.innerHTML = `
+          <div class="user-info">
+            <div class="user-avatar">${userInitials}</div>
+            <span class="user-name">${userName}</span>
+          </div>
+          <button class="btn btn-danger" onclick="handleLogout()">Đăng xuất</button>
+        `;
+      } else {
+        authButtons.innerHTML = `
+          <a href="login.html" class="btn btn-ghost">Đăng nhập</a>
+          <a href="register.html" class="btn btn-primary">Đăng ký</a>
+        `;
+      }
+    }
+
+    // Handle logout
+    async function handleLogout() {
+      try {
+        const response = await fetch('/api/auth/logout', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          }
+        });
+        
+        if (response.ok) {
+          localStorage.removeItem('user');
+          localStorage.removeItem('isLoggedIn');
+          window.location.reload();
+        }
+      } catch (error) {
+        console.error('Logout error:', error);
+        // Still logout on client side even if API fails
+        localStorage.removeItem('user');
+        localStorage.removeItem('isLoggedIn');
+        window.location.reload();
+      }
+    }
+
+    // Initialize auth UI on page load
+    updateAuthUI();
+
+    // Cursor glow effect
+    const glow = document.getElementById('cursorGlow');
+    document.addEventListener('mousemove', e => {
+      glow.style.left = e.clientX + 'px';
+      glow.style.top = e.clientY + 'px';
+    });
+
+    // Parallax for orbs
+    const orbs = document.querySelectorAll('.neon-orb');
+    document.addEventListener('mousemove', e => {
+      const x = (e.clientX / window.innerWidth - 0.5) * 20;
+      const y = (e.clientY / window.innerHeight - 0.5) * 20;
+      orbs.forEach((o, i) => {
+        o.style.transform = `translate(${x * (i + 1)}px, ${y * (i + 1)}px)`;
+      });
+    });
+  </script>
+</body>
+</html>

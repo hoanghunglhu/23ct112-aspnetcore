@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Đăng nhập</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body{margin:0;font-family:Inter,sans-serif;background:#0b0f13;color:#e6f2ff;display:flex;justify-content:center;align-items:center;height:100vh;}
+    .login-card{background:rgba(255,255,255,0.03);padding:36px;border-radius:14px;border:1px solid rgba(255,255,255,0.06);backdrop-filter:blur(6px);width:320px;text-align:center;}
+    .login-card h2{margin-bottom:24px;color:#00f0ff;}
+    .login-card input{width:94%;padding:10px;margin:10px 0;border-radius:8px;border:1px solid rgba(255,255,255,0.1);background:transparent;color:#e6f2ff;}
+    .login-card button{width:100%;padding:10px;margin-top:12px;border:none;border-radius:10px;background:linear-gradient(90deg,#00f0ff,#ff2ec4);color:#071019;font-weight:700;cursor:pointer;}
+    .login-card a{color:#70ff6b;text-decoration:none;font-size:14px;display:block;margin-top:12px;}
+    .message{margin-top:12px;font-size:14px;padding:8px;border-radius:6px;}
+    .error{background:rgba(255,0,0,0.2);color:#ff6b6b;}
+    .success{background:rgba(0,255,0,0.2);color:#70ff6b;}
+  </style>
+</head>
+<body>
+  <div class="login-card">
+    <h2>Đăng nhập</h2>
+    <form id="loginForm">
+      <input type="email" id="email" name="email" placeholder="Email" required>
+      <input type="password" id="password" name="password" placeholder="Mật khẩu" required>
+      <button type="submit">Đăng nhập</button>
+    </form>
+    <div id="message"></div>
+    <a href="register.html">Chưa có tài khoản? Đăng ký</a>
+  </div>
+
+  <script>
+    document.getElementById('loginForm').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      
+      const email = document.getElementById('email').value;
+      const password = document.getElementById('password').value;
+      const messageDiv = document.getElementById('message');
+      
+      try {
+        const response = await fetch('/api/auth/login', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({ email, password })
+        });
+        
+        const data = await response.json();
+        
+        if (response.ok && data.success) {
+          messageDiv.className = 'message success';
+          messageDiv.textContent = data.message;
+          
+          // Lưu thông tin user vào localStorage
+          localStorage.setItem('user', JSON.stringify(data.user));
+          localStorage.setItem('isLoggedIn', 'true');
+          
+          // Chuyển hướng sau 1 giây
+          setTimeout(() => {
+            window.location.href = 'index.html';
+          }, 1000);
+        } else {
+          messageDiv.className = 'message error';
+          messageDiv.textContent = data.message;
+        }
+      } catch (error) {
+        messageDiv.className = 'message error';
+        messageDiv.textContent = 'Có lỗi xảy ra. Vui lòng thử lại!';
+      }
+    });
+  </script>
+</body>
+</html>
