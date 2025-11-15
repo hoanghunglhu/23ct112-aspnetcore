@@ -1,7 +1,10 @@
 using Microsoft.EntityFrameworkCore;
 using LearnApiNetCore.Entity;
 using LearnApiNetCore.Services;
-using Serilog;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
+
 var builder = WebApplication.CreateBuilder(args);
 // Cấu hình Serilog
 Log.Logger = new LoggerConfiguration()
@@ -14,6 +17,10 @@ builder.Host.UseSerilog(); // dùng Serilog thay cho logging mặc định
 builder.Services.Configure<EmailSettings>(
     builder.Configuration.GetSection("EmailSettings"));
 builder.Services.AddTransient<LearnApiNetCore.Services.EmailService>();
+
+var logRepository = LogManager.GetRepository(System.Reflection.Assembly.GetEntryAssembly());
+var log4netFile = new FileInfo("log4net.config");
+XmlConfigurator.Configure(logRepository, log4netFile);
 
 // Add DbContext with SQL Server
 builder.Services.AddDbContext<AppDbContext>(options =>
@@ -42,6 +49,9 @@ if(app.Environment.IsDevelopment())
      app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+app.UseAuthentication();
+app.UseAuthorization();
 
 app.MapControllers();
 
