@@ -1,0 +1,24 @@
+2025-11-15 08:36:11.403 +07:00 [INF] Ứng dụng đang khởi động...
+2025-11-15 08:36:11.479 +07:00 [INF] Now listening on: http://localhost:5296
+2025-11-15 08:36:11.483 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-11-15 08:36:11.484 +07:00 [INF] Hosting environment: Development
+2025-11-15 08:36:11.487 +07:00 [INF] Content root path: D:\23ct112-aspnetcore
+2025-11-15 08:36:20.261 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5296/ - null null
+2025-11-15 08:36:20.298 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5296/ - 404 0 null 39.2825ms
+2025-11-15 08:36:20.308 +07:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5296/, Response status code: 404
+2025-11-15 08:36:25.648 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5296/index.html - null null
+2025-11-15 08:36:25.655 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5296/index.html - 404 0 null 7.0256ms
+2025-11-15 08:36:25.659 +07:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5296/index.html, Response status code: 404
+2025-11-15 08:36:45.751 +07:00 [INF] Application is shutting down...
+2025-11-15 08:40:37.174 +07:00 [INF] Ứng dụng đang khởi động...
+2025-11-15 08:40:37.252 +07:00 [INF] Now listening on: http://localhost:5296
+2025-11-15 08:40:37.256 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-11-15 08:40:37.257 +07:00 [INF] Hosting environment: Development
+2025-11-15 08:40:37.258 +07:00 [INF] Content root path: D:\23ct112-aspnetcore
+2025-11-15 08:40:52.642 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5296/ - null null
+2025-11-15 08:40:52.669 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5296/ - 404 0 null 28.6524ms
+2025-11-15 08:40:52.679 +07:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5296/, Response status code: 404
+2025-11-15 08:40:57.807 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5296/index.html - null null
+2025-11-15 08:40:57.812 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5296/index.html - 404 0 null 5.2769ms
+2025-11-15 08:40:57.817 +07:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5296/index.html, Response status code: 404
+2025-11-15 08:41:18.454 +07:00 [INF] Application is shutting down...
