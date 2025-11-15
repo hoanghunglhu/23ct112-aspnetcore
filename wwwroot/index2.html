@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wehrmacht Personalakte</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 40px;
+            background: #b7b7b7;
+            font-family: "Courier New", monospace;
+        }
+
+        .paper {
+            background: #e5e2d3;
+            width: 650px;
+            padding: 30px;
+            margin: auto;
+            border: 4px solid #3a3a3a;
+            border-radius: 5px;
+            box-shadow: 0 0 12px rgba(0,0,0,0.5);
+            position: relative;
+        }
+
+        .eagle {
+            width: 140px;
+            opacity: 0.3;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+
+        .stamp {
+            position: absolute;
+            left: 20px;
+            top: 20px;
+            font-size: 26px;
+            transform: rotate(-12deg);
+            color: #9b0000;
+            opacity: 0.7;
+            font-weight: bold;
+            border: 3px solid #9b0000;
+            padding: 4px 12px;
+        }
+
+        .avatar {
+            width: 140px;
+            height: 170px;
+            border: 3px solid #000;
+            background: #ccc;
+            object-fit: cover;
+        }
+
+        .title {
+            font-size: 26px;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        .section-title {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+            text-decoration: underline;
+        }
+
+        .info p {
+            margin: 6px 0;
+            font-size: 16px;
+        }
+
+        hr {
+            border: 0;
+            border-top: 2px solid #000;
+            margin: 18px 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="paper">
+
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Flag_of_the_NSDAP_%281920%E2%80%931945%2C_1-1%29.svg/250px-Flag_of_the_NSDAP_%281920%E2%80%931945%2C_1-1%29.svg.png" class="eagle">
+
+        <div class="stamp">Geheim!</div>
+
+        <div style="display:flex; gap:24px;">
+            <img src="https://img.wattpad.com/06426e7c984be59cd55688207feea743e3f4c488/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f776174747061642d6d656469612d736572766963652f53746f7279496d6167652f6849366b445f35696779557758673d3d2d313033353934373831372e313636396133323834343335633530663333303138313532393131362e6a7067" class="avatar">
+            <div>
+                <div class="title">Wehrmacht Personalakte</div>
+                <p><strong>Dienststelle:</strong> Heeresgruppe Mitte</p>
+                <p><strong>Einheit:</strong> 3. Panzer-Division</p>
+                <p><strong>Soldbuch Nr.:</strong> 41-87352</p>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="section-title">PERSONALANGABEN</div>
+        <div class="info">
+            <p><strong>Name:</strong> Ngô Quang Vinh</p>
+            <p><strong>Geburtsjahr:</strong> 2005</p>
+            <p><strong>Geburtsort:</strong> Bien Hoa</p>
+            <p><strong>Blutgruppe:</strong> A+</p>
+            <p><strong>Nationalität:</strong> Deutsch</p>
+        </div>
+
+        <div class="section-title">DIENSTGRAD & DIENSTZEIT</div>
+        <div class="info">
+            <p><strong>Dienstgrad:</strong> Unteroffizier</p>
+            <p><strong>Dienststatus:</strong> Aktiv</p>
+            <p><strong>Fachgebiet:</strong> Panzerfahrer / Mechaniker</p>
+            <p><strong>Letzter Einsatz:</strong> Ostfront – Kursk</p>
+        </div>
+
+        <div class="section-title">BEMERKUNGEN</div>
+        <div class="info">
+            <p>Erfahrener Panzerfahrer. Teilnahme an Operation Barbarossa, Smolensk und Kursk. Zeigt hohe Disziplin und technische Fähigkeiten.</p>
+        </div>
+        <audio autoplay loop>
+            <source src="music.mp3" type="audio/mpeg">
+        </audio>
+        
+    </div>
+
+</body>
+</html>

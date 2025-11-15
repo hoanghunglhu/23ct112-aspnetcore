@@ -34,7 +34,15 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+<<<<<<< Updated upstream
+=======
+app.UseAuthentication();
+app.UseAuthorization();
+
+app.UseStaticFiles();
+>>>>>>> Stashed changes
 app.MapControllers();
+
 
 app.Run();
 
