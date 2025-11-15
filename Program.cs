@@ -20,7 +20,7 @@ try
 
     builder.Services.Configure<EmailSettings>(builder.Configuration.GetSection("EmailSetting"));
     builder.Services.AddScoped<IEmailService, EmailService>();
-    builder.Services.AddHostedService<EmailBackgroundService>();
+   
     builder.Services.AddControllers();
     builder.Services.AddSwaggerGen();
     builder.Logging.ClearProviders();
@@ -33,7 +33,9 @@ try
         app.UseSwagger();
         app.UseSwaggerUI();
     }
-
+    app.UseStaticFiles();
+    app.UseDefaultFiles();
+    
     app.MapControllers();
 
     app.Run();

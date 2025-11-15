@@ -6,11 +6,11 @@ namespace LearnApiNetCore.Services
 {
     public class EmailSettings
     {
-        public string SmtpServer { get; set; }
+        public string SmtpServer { get; set; } = null!;
         public int SmtpPort { get; set; }
-        public string SenderName { get; set; }
-        public string SenderEmail { get; set; }
-        public string Password { get; set; }
+        public string SenderName { get; set; } = null!;
+        public string SenderEmail { get; set; } = null!;
+        public string Password { get; set; } = null!;
     }
 
     public interface IEmailService
