@@ -3,91 +3,222 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trang Đăng Nhập</title>
+    <title>Zenith | Đăng nhập</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #008CBA; /* Màu nền xanh biển */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-        }
+       /* Thiết lập chung */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* Nền Gradient rực rỡ */
+    background: linear-gradient(135deg, #FF6B6B 0%, #FFD93D 50%, #4ECDC4 100%); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
 
-        .login-container {
-            background-color: #ffffff;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            width: 300px;
-            text-align: center;
-        }
+/* Container chính */
+.login-container {
+    padding: 20px;
+    width: 100%;
+    max-width: 420px;
+}
 
-        h2 {
-            color: #008CBA;
-            margin-bottom: 20px;
-        }
+/* Thẻ đăng nhập - Áp dụng Neumorphism nhẹ */
+.login-card {
+    background-color: rgba(255, 255, 255, 0.95); /* Thẻ trắng mờ */
+    backdrop-filter: blur(10px); /* Hiệu ứng kính mờ (Frost Glass) */
+    border-radius: 25px; 
+    padding: 45px;
+    
+    /* Đổ bóng Neumorphism/Sâu (Inverted Shadow) */
+    box-shadow: 
+        -10px -10px 20px rgba(255, 255, 255, 0.9), /* Bóng sáng */
+        10px 10px 20px rgba(0, 0, 0, 0.2); /* Bóng tối sâu hơn */
+    
+    text-align: center;
+    transition: all 0.4s ease;
+}
 
-        .input-field {
-            width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            font-size: 16px;
-        }
+.login-card:hover {
+    transform: scale(1.02); 
+    box-shadow: 
+        -15px -15px 30px rgba(255, 255, 255, 0.9),
+        15px 15px 30px rgba(0, 0, 0, 0.3);
+}
 
-        .input-field:focus {
-            outline: none;
-            border-color: #008CBA;
-        }
+.login-card h2 {
+    /* Sử dụng màu gradient rực rỡ cho tiêu đề */
+    background: linear-gradient(90deg, #FF6B6B, #FFD93D);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 2.2em;
+    font-weight: 800;
+    margin-bottom: 5px;
+}
 
-        .login-button {
-            width: 100%;
-            padding: 12px;
-            background-color: #008CBA;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            font-size: 16px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
+.login-card p {
+    color: #555555;
+    margin-bottom: 40px;
+    font-size: 1em;
+}
 
-        .login-button:hover {
-            background-color: #006c8b;
-        }
+/* Nhóm Input - Hiệu ứng nhấn sâu */
+.input-group {
+    display: flex;
+    align-items: center;
+    border: none; /* Bỏ viền cũ */
+    border-radius: 15px;
+    margin-bottom: 25px;
+    padding: 15px 20px;
+    background-color: #e6e6e6; /* Nền input hơi xám */
+    
+    /* Bóng nhấn sâu vào */
+    box-shadow: inset 5px 5px 10px #bebebe, 
+                inset -5px -5px 10px #ffffff;
+    transition: all 0.3s;
+}
 
-        .footer {
-            margin-top: 20px;
-            font-size: 14px;
-            color: #777;
-        }
+.input-group:focus-within {
+    background-color: #ffffff; /* Sáng hơn khi focus */
+    box-shadow: 0 0 0 3px rgba(255, 107, 107, 0.2); /* Vòng sáng ngoài */
+}
 
-        .footer a {
-            color: #008CBA;
-            text-decoration: none;
-        }
+.input-group i {
+    color: #FF6B6B; /* Icon màu nóng */
+    margin-right: 15px;
+    font-size: 1.2em;
+}
 
-        .footer a:hover {
-            text-decoration: underline;
-        }
+.input-group input {
+    border: none;
+    outline: none;
+    flex-grow: 1;
+    font-size: 1.1em;
+    padding: 0;
+    background: transparent;
+    color: #333;
+}
+
+/* Nút Đăng nhập chính - Gradient rực rỡ */
+.login-button {
+    width: 100%;
+    padding: 18px;
+    border: none;
+    border-radius: 15px;
+    color: white;
+    font-size: 1.2em;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 15px;
+    
+    /* Gradient cực kỳ nổi bật */
+    background: linear-gradient(135deg, #FF6B6B 0%, #FFD93D 100%); 
+    box-shadow: 0 10px 20px rgba(255, 107, 107, 0.5); /* Đổ bóng mạnh */
+    transition: background 0.3s, transform 0.2s;
+}
+
+.login-button:hover {
+    background: linear-gradient(135deg, #FFD93D 0%, #FF6B6B 100%);
+    transform: translateY(-3px);
+    box-shadow: 0 12px 25px rgba(255, 107, 107, 0.7);
+}
+
+/* Quên mật khẩu */
+.forgot-password {
+    text-align: right;
+    margin-bottom: 30px;
+}
+
+.forgot-password a {
+    color: #4ECDC4; /* Màu xanh ngọc bắt mắt */
+    text-decoration: none;
+    font-size: 0.95em;
+    font-weight: 600;
+}
+
+/* Phần phân cách */
+.separator {
+    color: #aaaaaa;
+    margin: 30px 0;
+    font-weight: 500;
+}
+
+/* Đăng nhập bằng mạng xã hội */
+.social-login {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 15px;
+    background-color: #f0f0f0;
+    color: #555555;
+    font-size: 1em;
+    cursor: pointer;
+    margin-bottom: 15px;
+    transition: all 0.3s;
+    
+    /* Bóng nhẹ như một nút Neumorphism */
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1), 
+                -5px -5px 10px rgba(255, 255, 255, 0.8);
+}
+
+.google-btn:hover {
+    background-color: #ffffff;
+    color: #FF6B6B;
+    box-shadow: 0 0 10px rgba(255, 107, 107, 0.3);
+}
+
+/* Liên kết Đăng ký */
+.register-link {
+    margin-top: 30px;
+    font-size: 1em;
+    color: #555555;
+}
+
+.register-link a {
+    color: #FF6B6B; /* Màu nóng nổi bật */
+    text-decoration: none;
+    font-weight: bold;
+}
     </style>
 </head>
 <body>
-
     <div class="login-container">
-        <h2>Đăng Nhập</h2>
-        <form action="#" method="POST">
-            <input type="text" class="input-field" placeholder="Tên đăng nhập" required><br>
-            <input type="password" class="input-field" placeholder="Mật khẩu" required><br>
-            <button type="submit" class="login-button">Đăng Nhập</button>
-        </form>
-        <div class="footer">
-            <p>Chưa có tài khoản? <a href="#">Đăng ký ngay</a></p>
+        <div class="login-card">
+            <h2>Chào mừng trở lại! 👋</h2>
+            <p>Đăng nhập để tiếp tục truy cập vào hệ thống.</p>
+            
+            <form action="#" method="POST">
+                
+                <div class="input-group">
+                    <i class="fas fa-user"></i>
+                    <input type="text" id="username" name="username" placeholder="Tên đăng nhập" required>
+                </div>
+                
+                <div class="input-group">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" id="password" name="password" placeholder="Mật khẩu" required>
+                </div>
+                
+                <div class="forgot-password">
+                    <a href="#">Quên mật khẩu?</a>
+                </div>
+                
+                <button type="submit" class="login-button">Đăng nhập</button>
+            </form>
+            
+            <div class="separator">Hoặc</div>
+            
+            <button class="social-login google-btn">
+                <i class="fab fa-google"></i> Đăng nhập bằng Google
+            </button>
+            
+            <div class="register-link">
+                Chưa có tài khoản? <a href="#">Đăng ký ngay</a>
+            </div>
         </div>
     </div>
-
 </body>
 </html>
