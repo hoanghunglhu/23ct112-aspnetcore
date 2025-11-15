@@ -5,8 +5,15 @@ using LearnApiNetCore.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
+using log4net;
+using log4net.Config;
+using System.IO;
 
 var builder = WebApplication.CreateBuilder(args);
+
+var logRepository = LogManager.GetRepository(System.Reflection.Assembly.GetEntryAssembly());
+var log4netFile = new FileInfo("log4net.config");
+XmlConfigurator.Configure(logRepository, log4netFile);
 
 // Add DbContext with SQL Server
 builder.Services.AddDbContext<AppDbContext>(options =>
@@ -58,8 +65,5 @@ app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();
-
-// Ghi log khi chạy
-logger.Info("Ứng dụng đã khởi động thành công.");
 
 app.Run();
