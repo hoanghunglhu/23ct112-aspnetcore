@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Một Vài Thông Tin Về Tôi - HonggNhungg</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #d6f5d6; /* xanh lá nhạt */
+            margin: 0;
+            padding: 0;
+            color: #2e4f2e;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            background-color: #b3e6b3;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        header h1 {
+            font-size: 36px;
+            margin: 0;
+            animation: fadeIn 2s ease;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background: #ffffffaa;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            animation: slideUp 1s ease;
+        }
+
+        .profile-pic {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            display: block;
+            margin: 0 auto 20px auto;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            transition: transform 0.3s;
+            object-fit: cover;
+        }
+
+        .profile-pic:hover {
+            transform: scale(1.05);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 10px;
+            color: #1f3d1f;
+        }
+
+        p {
+            text-align: center;
+            line-height: 1.7;
+            font-size: 18px;
+        }
+
+        /* Hiệu ứng */
+        @keyframes fadeIn {
+            from {opacity: 0;}
+            to {opacity: 1;}
+        }
+
+        @keyframes slideUp {
+            from {transform: translateY(30px); opacity: 0;}
+            to {transform: translateY(0); opacity: 1;}
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Một Vài Thông Tin Về Tôi</h1>
+    </header>
+
+    <div class="container">
+        <img src="https://www.thanglongwaterpuppet.org/wp-content/uploads/2025/10/mot-meme-ve-hai-co-the-bien-tinh-huong-cang-thang-thanh-tro-dua-vui-ve.jpg" alt="Ảnh của HonggNhungg" class="profile-pic">
+
+        <h2>HonggNhungg</h2>
+
+        <p>
+            Xin chào! Mình là <strong>HonggNhungg</strong>, 20 tuổi, hiện đang sống tại <strong>Biên Hòa</strong>.  
+            Đây là trang nhỏ ghi lại đôi dòng tự sự về bản thân — đơn giản, nhẹ nhàng và đúng với những gì mình yêu thích.  
+            Mình luôn cố gắng sống chân thành, hướng về những điều tích cực và yêu thích sự bình yên trong cuộc sống.
+        </p>
+    </div>
+
+</body>
+</html>

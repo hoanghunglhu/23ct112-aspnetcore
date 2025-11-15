@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng Nhập</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: "Poppins", sans-serif;
+            background: linear-gradient(135deg, #d8f8d8, #baf0ba);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .login-box {
+            width: 100%;
+            max-width: 400px; /* Giới hạn chiều rộng */
+            background: #ffffffcc;
+            backdrop-filter: blur(10px);
+            padding: 35px;
+            border-radius: 20px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+            animation: fadeIn 1s ease;
+        }
+
+        .login-box h2 {
+            text-align: center;
+            margin-bottom: 25px;
+            color: #2e6b2e;
+            font-size: 28px;
+            font-weight: 600;
+        }
+
+        .input-group {
+            position: relative;
+            margin-bottom: 22px;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 13px 45px 13px 15px;
+            font-size: 15px;
+            border: 2px solid #7abc7a;
+            border-radius: 12px;
+            outline: none;
+            transition: 0.25s;
+            box-sizing: border-box;
+        }
+
+        .input-group input:focus {
+            border-color: #2e6b2e;
+            box-shadow: 0 0 8px rgba(46, 107, 46, 0.3);
+        }
+
+        .input-group i {
+            position: absolute;
+            right: 15px;
+            top: 12px;
+            font-size: 18px;
+            color: #2e6b2e;
+        }
+
+        .btn {
+            width: 100%;
+            padding: 13px;
+            background: #2e6b2e;
+            color: #fff;
+            border: none;
+            border-radius: 12px;
+            font-size: 17px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: 0.25s;
+        }
+
+        .btn:hover {
+            background: #1d4d1d;
+            transform: scale(1.03);
+        }
+
+        .forgot {
+            text-align: right;
+            display: block;
+            margin-top: 10px;
+            color: #2e6b2e;
+            font-size: 14px;
+            text-decoration: none;
+        }
+
+        .forgot:hover {
+            text-decoration: underline;
+        }
+
+        .error {
+            text-align: center;
+            color: red;
+            margin-bottom: 10px;
+            font-size: 15px;
+        }
+
+        @keyframes fadeIn {
+            from {opacity: 0; transform: translateY(20px);}
+            to {opacity: 1; transform: translateY(0);}
+        }
+    </style>
+</head>
+<body>
+
+    <div class="login-box">
+        <h2>Đăng Nhập</h2>
+
+        <!-- Thông báo lỗi nếu có -->
+        <div id="error" class="error"></div>
+
+        <!-- Form đăng nhập -->
+        <form id="loginForm">
+            <div class="input-group">
+                <input type="text" id="username" placeholder="Tên đăng nhập" required>
+                <i class="fa-solid fa-user"></i>
+            </div>
+
+            <div class="input-group">
+                <input type="password" id="password" placeholder="Mật khẩu" required>
+                <i class="fa-solid fa-lock"></i>
+            </div>
+
+            <button class="btn" type="submit">Đăng Nhập</button>
+        </form>
+
+        <a href="#" class="forgot">Quên mật khẩu?</a>
+    </div>
+
+    <script>
+        document.getElementById("loginForm").addEventListener("submit", function(e) {
+            e.preventDefault(); // ngăn form gửi đi
+
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+
+            if(username === "HonggNhungg" && password === "123456") {
+                window.location.href = "index.html"; // nhập đúng → index.html
+            } else {
+                document.getElementById("error").innerText = "Tên đăng nhập hoặc mật khẩu không đúng!";
+            }
+        });
+    </script>
+
+</body>
+</html>
