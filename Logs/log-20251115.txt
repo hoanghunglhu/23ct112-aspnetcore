@@ -22,3 +22,17 @@
 2025-11-15 08:40:57.812 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5296/index.html - 404 0 null 5.2769ms
 2025-11-15 08:40:57.817 +07:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5296/index.html, Response status code: 404
 2025-11-15 08:41:18.454 +07:00 [INF] Application is shutting down...
+2025-11-15 08:41:20.963 +07:00 [INF] Ứng dụng đang khởi động...
+2025-11-15 08:41:21.035 +07:00 [INF] Now listening on: http://localhost:5296
+2025-11-15 08:41:21.039 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-11-15 08:41:21.040 +07:00 [INF] Hosting environment: Development
+2025-11-15 08:41:21.041 +07:00 [INF] Content root path: D:\23ct112-aspnetcore
+2025-11-15 08:41:22.477 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5296/index.html - null null
+2025-11-15 08:41:22.517 +07:00 [INF] Sending file. Request path: '/index.html'. Physical path: 'D:\23ct112-aspnetcore\wwwroot\index.html'
+2025-11-15 08:41:22.521 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5296/index.html - 200 41 text/html 45.326ms
+2025-11-15 08:41:22.534 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5296/favicon.ico - null null
+2025-11-15 08:41:22.539 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5296/favicon.ico - 404 0 null 5.4334ms
+2025-11-15 08:41:22.543 +07:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5296/favicon.ico, Response status code: 404
+2025-11-15 08:43:48.696 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5296/index.html - null null
+2025-11-15 08:43:48.706 +07:00 [INF] Sending file. Request path: '/index.html'. Physical path: 'D:\23ct112-aspnetcore\wwwroot\index.html'
+2025-11-15 08:43:48.714 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5296/index.html - 200 3114 text/html 18.419ms
