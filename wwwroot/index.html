@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Ngô Tấn Lộc - Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+/* ========= GLOBAL ========= */
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  color: #EFFFFD;
+  background: linear-gradient(160deg, #0D1B2A, #123B47, #0F4C5C, #1B6A74);
+  background-size: 400% 400%;
+  animation: auroraShift 22s ease infinite;
+  overflow-x: hidden;
+}
+
+/* AURORA ANIMATION */
+@keyframes auroraShift {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.aurora-layer {
+  position: fixed;
+  width: 160%;
+  height: 200%;
+  top: -40%;
+  left: -30%;
+  pointer-events: none;
+  z-index: -1;
+  filter: blur(120px);
+  background: radial-gradient(circle at 50% 50%, rgba(178,255,246,0.25), transparent 70%);
+  animation: waveMove 18s ease-in-out infinite alternate;
+}
+.aurora-layer:nth-child(2) { background: radial-gradient(circle at 40% 60%, rgba(110,231,255,0.25), transparent 70%); animation-duration: 22s; }
+.aurora-layer:nth-child(3) { background: radial-gradient(circle at 70% 40%, rgba(150,200,255,0.22), transparent 70%); animation-duration: 20s; }
+@keyframes waveMove { 0%{transform:translate(-8%,-8%) rotate(0deg);} 50%{transform:translate(10%,10%) rotate(35deg);} 100%{transform:translate(-8%,-8%) rotate(0deg);} }
+
+/* ========= HEADER ========= */
+header {
+  text-align: center;
+  padding: 60px 20px;
+  color: #B9FFF3;
+}
+header h1 { font-size: 48px; font-weight: 700; text-shadow: 0 0 12px #5BE4C7; }
+header p { font-size: 20px; margin-top: 10px; }
+
+/* ========= CARD ========= */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 20px auto;
+}
+.card {
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.25);
+  border-radius: 16px;
+  padding: 25px;
+  text-align: center;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+  backdrop-filter: blur(12px);
+  transition: 0.4s ease, transform 0.3s ease;
+}
+.card:hover {
+  box-shadow: 0 0 25px rgba(0,255,209,0.3);
+  transform: translateY(-6px) scale(1.03);
+}
+.card-icon {
+  font-size: 45px;
+  margin-bottom: 10px;
+  background: linear-gradient(120deg, #5BE4C7, #76E3FF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ========= SKILL BAR ========= */
+.skill-name {
+  display: flex; justify-content: space-between;
+  font-weight: 600; margin-bottom: 6px;
+}
+.skill-bar { width: 100%; height: 18px; background: rgba(255,255,255,0.1); border-radius: 12px; overflow: hidden; margin-bottom: 12px; }
+.skill-fill { height: 100%; width: 0; background: linear-gradient(90deg,#5BE4C7,#76E3FF); border-radius: 12px; transition: width 1.2s ease-in-out; }
+
+/* ========= FOOTER ========= */
+footer { text-align:center; padding:20px; color:#B9FFF3; margin-top:40px; background:rgba(0,0,0,0.25); backdrop-filter: blur(6px); }
+
+/* CURSOR TRAIL */
+.cursor-particle { position: fixed; width: 10px; height: 10px; border-radius: 50%; pointer-events: none; background: rgba(255,255,255,0.9); box-shadow: 0 0 15px rgba(255,255,255,0.9); transform: translate(-50%, -50%); animation: fadeOut 0.6s linear forwards; }
+@keyframes fadeOut { 0%{opacity:1; transform:scale(1);} 100%{opacity:0; transform:scale(0.2);} }
+
+/* RESPONSIVE */
+@media (max-width:600px){header h1{font-size:36px;} header p{font-size:18px;}}
+</style>
+</head>
+<body>
+
+<div class="aurora-layer"></div>
+<div class="aurora-layer"></div>
+<div class="aurora-layer"></div>
+
+<header>
+  <h1>Ngô Tấn Lộc</h1>
+  <p>Học sinh định hướng Công nghệ Thông tin</p>
+</header>
+
+<!-- GIỚI THIỆU -->
+<div class="card-grid">
+  <div class="card">
+    <div class="card-icon">👨‍💻</div>
+    <h3>Giới Thiệu</h3>
+    <p>Mình là Ngô Tấn Lộc, đam mê lập trình web, ứng dụng di động và sáng tạo sản phẩm số. Mục tiêu trở thành developer chuyên nghiệp.</p>
+  </div>
+</div>
+
+<!-- KỸ NĂNG -->
+<div class="card-grid">
+  <div class="card">
+    <div class="card-icon">💻</div>
+    <h3>Kỹ Năng</h3>
+    <div class="skill-name">HTML & CSS <span class="skill-percent" data-percent="90">0%</span></div>
+    <div class="skill-bar"><div class="skill-fill"></div></div>
+    <div class="skill-name">JavaScript <span class="skill-percent" data-percent="85">0%</span></div>
+    <div class="skill-bar"><div class="skill-fill"></div></div>
+    <div class="skill-name">React.js <span class="skill-percent" data-percent="75">0%</span></div>
+    <div class="skill-bar"><div class="skill-fill"></div></div>
+  </div>
+</div>
+
+<!-- DỰ ÁN -->
+<div class="card-grid">
+  <div class="card">
+    <div class="card-icon">📋</div>
+    <h3>Dự Án</h3>
+    <p>Task Manager Web - Quản lý công việc có đăng nhập, phân loại và lưu cloud.</p>
+  </div>
+  <div class="card">
+    <div class="card-icon">🎧</div>
+    <h3>Dự Án</h3>
+    <p>English Practice App - Ứng dụng luyện nghe nói, bài học ngắn, thân thiện người dùng.</p>
+  </div>
+</div>
+
+<!-- LIÊN HỆ -->
+<div class="card-grid">
+  <div class="card">
+    <div class="card-icon">📧</div>
+    <h3>Liên Hệ</h3>
+    <p>Email: <b>ngotansloc@gmail.com</b></p>
+    <p>LinkedIn: <a href="#">linkedin.com/in/ngotansloc</a></p>
+    <p>GitHub: <a href="#">github.com/ngotansloc</a></p>
+  </div>
+</div>
+
+<footer>© 2025 Ngô Tấn Lộc - Portfolio</footer>
+
+<script>
+// CURSOR TRAIL
+document.addEventListener("mousemove", (e) => {
+  const particle = document.createElement("div");
+  particle.className = "cursor-particle";
+  particle.style.left = e.pageX + "px";
+  particle.style.top = e.pageY + "px";
+  document.body.appendChild(particle);
+  setTimeout(() => particle.remove(), 600);
+});
+
+// SKILL BAR ANIMATION
+const fills = document.querySelectorAll(".skill-fill");
+const percents = document.querySelectorAll(".skill-percent");
+window.addEventListener("scroll", () => {
+  fills.forEach((fill,i)=>{
+    const rect = fill.getBoundingClientRect();
+    if(rect.top < window.innerHeight-80){
+      const target = parseInt(percents[i].dataset.percent);
+      fill.style.width = target+"%";
+      let count=0; const step=Math.ceil(target/60);
+      const interval=setInterval(()=>{count+=step; if(count>=target){count=target; clearInterval(interval);} percents[i].innerText=count+"%";},16);
+    }
+  });
+});
+</script>
+
+</body>
+</html>
