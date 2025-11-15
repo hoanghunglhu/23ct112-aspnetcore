@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giới Thiệu Về Tôi</title>
+    <!-- Tải Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Tải font Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    
+</head>
+<body class="bg-blue-950 text-gray-100 min-h-screen flex items-center justify-center p-6">
+
+    <!-- Container chính cho thẻ thông tin -->
+    <div class="profile-card bg-blue-900 p-10 md:p-12 rounded-2xl w-full max-w-2xl"> <!-- Tăng max-w-2xl để có thêm không gian -->
+        
+        <!-- Tiêu đề -->
+        <h1 class="text-3xl font-bold text-white mb-8 text-center">
+            Thông Tin Cá Nhân
+        </h1>
+
+        <!-- Container cho bố cục flex (trái/phải) -->
+        <div class="flex flex-col md:flex-row md:space-x-10 items-center md:items-start">
+
+            <!-- Bên trái: Ảnh đại diện -->
+            <div class="flex-shrink-0 mb-6 md:mb-0">
+                <img 
+                    src="https://iweather.edu.vn/upload/2025/04/chibi-panda-008.webp" 
+                    alt="Ảnh đại diện" 
+                    class="w-40 h-40 rounded-full border-4 border-blue-700 object-cover shadow-lg"
+                    onerror="this.src='https://placehold.co/160x160/e0e7ff/312e81?text=Lỗi+Ảnh&font=inter';"
+                >
+            </div>
+            
+            <!-- Bên phải: Khu vực chứa thông tin -->
+            <div class="space-y-5 w-full">
+                
+                <!-- Mỗi mục thông tin -->
+                <div>
+                    <strong class="text-blue-300 font-semibold text-sm uppercase tracking-wider block">Tên:</strong>
+                    <span class="text-lg text-white mt-1 block">Viên Xuân Quý</span>
+                </div>
+
+                <div>
+                    <strong class="text-blue-300 font-semibold text-sm uppercase tracking-wider block">Giới tính:</strong>
+                    <span class="text-lg text-white mt-1 block">Nữ</span>
+                </div>
+
+                <div>
+                    <strong class="text-blue-300 font-semibold text-sm uppercase tracking-wider block">Ngày sinh:</strong>
+                    <span class="text-lg text-white mt-1 block">02/06/2005</span>
+                </div>
+
+                <div>
+                    <strong class="text-blue-300 font-semibold text-sm uppercase tracking-wider block">Quê quán:</strong>
+                    <span class="text-lg text-white mt-1 block">Định Quán - Đồng Nai</span>
+                </div>
+
+                <div>
+                    <strong class="text-blue-300 font-semibold text-sm uppercase tracking-wider block">Lớp:</strong>
+                    <span class="text-lg text-white mt-1 block">23CT112</span>
+                </div>
+
+                <div>
+                    <strong class="text-blue-300 font-semibold text-sm uppercase tracking-wider block">Trường:</strong>
+                    <span class="text-lg text-white mt-1 block">Trường Đại học Lạc Hồng</span>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

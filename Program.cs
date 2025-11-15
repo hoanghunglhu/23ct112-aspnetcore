@@ -23,6 +23,20 @@ try
     builder.Services.AddDbContext<AppDbContext>(options =>
         options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
+    // --- BẮT ĐẦU THÊM MÃ CORS ---
+    var MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
+
+    builder.Services.AddCors(options =>
+    {
+        options.AddPolicy(name: MyAllowSpecificOrigins,
+                        policy =>
+                        {
+                            policy.AllowAnyOrigin()   // Cho phép mọi nguồn
+                                    .AllowAnyHeader()   // Cho phép mọi header
+                                    .AllowAnyMethod();  // Cho phép mọi phương thức
+                        });
+    });
+
     builder.Services.AddMemoryCache();
     builder.Services.AddControllers();
     builder.Services.AddSwaggerGen();
@@ -40,6 +54,9 @@ try
         app.UseSwagger();
         app.UseSwaggerUI();
     }
+
+    app.UseStaticFiles();
+    app.UseDefaultFiles();
 
     app.MapControllers();
 

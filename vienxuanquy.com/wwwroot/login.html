@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng Nhập</title>
+    <!-- Tải Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Tải font Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* CSS tùy chỉnh */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .login-card {
+            transition: all 0.3s ease;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.4);
+        }
+
+        .login-card:hover {
+            transform: scale(1.02);
+            box-shadow: 0 35px 60px -15px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Tùy chỉnh input */
+        .form-input {
+            background-color: rgba(30, 58, 138, 0.5); /* Nền xanh đậm trong suốt */
+            border: 1px solid rgba(59, 130, 246, 0.3); /* Viền xanh nhạt */
+            color: white;
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-color: rgba(96, 165, 250, 0.7); /* Viền xanh sáng khi focus */
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2); /* Vòng sáng mờ */
+        }
+
+        .form-input::placeholder {
+            color: rgba(224, 231, 255, 0.6); /* Màu placeholder */
+        }
+    </style>
+</head>
+<body class="bg-blue-950 text-gray-100 min-h-screen flex items-center justify-center p-6">
+
+    <!-- Container chính cho thẻ đăng nhập -->
+    <div class="login-card bg-blue-900 p-10 md:p-12 rounded-2xl w-full max-w-md">
+        
+        <!-- Tiêu đề -->
+        <h1 class="text-3xl font-bold text-white mb-8 text-center">
+            Đăng Nhập
+        </h1>
+
+        <!-- Form đăng nhập -->
+        <form id="loginForm" class="space-y-6">
+            
+            <!-- Mục Tên đăng nhập / Email -->
+            <div>
+                <label for="username" class="block text-sm font-semibold text-blue-300 mb-2">Email hoặc Tên đăng nhập</label>
+                <input 
+                    type="text" 
+                    id="username" 
+                    name="username"
+                    placeholder="vidu@email.com"
+                    class="form-input w-full px-4 py-3 rounded-lg text-lg"
+                    required
+                >
+            </div>
+
+            <!-- Mục Mật khẩu -->
+            <div>
+                <label for="password" class="block text-sm font-semibold text-blue-300 mb-2">Mật khẩu</label>
+                <input 
+                    type="password" 
+                    id="password" 
+                    name="password"
+                    placeholder="••••••••"
+                    class="form-input w-full px-4 py-3 rounded-lg text-lg"
+                    required
+                >
+            </div>
+
+            <!-- Nút Đăng nhập -->
+            <div>
+                <button 
+                    type="submit"
+                    class="w-full bg-blue-600 hover:bg-blue-500 text-white font-bold text-lg py-3 px-4 rounded-lg transition duration-300 ease-in-out transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75"
+                >
+                    Đăng Nhập
+                </button>
+            </div>
+
+            <!-- Liên kết phụ -->
+            <div class="flex justify-between text-sm">
+                <a href="#" class="font-medium text-blue-300 hover:text-blue-200 transition-colors">Quên mật khẩu?</a>
+                <a href="#" class="font-medium text-blue-300 hover:text-blue-200 transition-colors">Tạo tài khoản mới</a>
+            </div>
+            
+            <!-- Thông báo lỗi (ẩn mặc định) -->
+            <div id="errorMessage" class="text-red-400 text-center hidden pt-2"></div>
+
+        </form>
+    </div>
+
+    <!-- Script "AuthController" (đính kèm) -->
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', async function(event) { 
+            event.preventDefault();
+
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            const errorMessage = document.getElementById('errorMessage');
+
+            
+            // Dọn dẹp thông báo lỗi cũ
+            errorMessage.classList.add('hidden');
+            errorMessage.classList.remove('text-green-400', 'text-red-400');
+
+            const apiUrl = 'http://localhost:5296/api/auth/login';
+
+            try {
+                
+                const response = await fetch(apiUrl, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json' 
+                    },
+                    body: JSON.stringify({ 
+                        username: username, 
+                        password: password 
+                    })
+                });
+
+                const data = await response.json();
+
+                if (response.ok) {
+ 
+                    console.log('Đăng nhập thành công:', data.message);
+                    
+                    errorMessage.textContent = data.message || 'Đăng nhập thành công!';
+                    errorMessage.classList.remove('hidden');
+                    errorMessage.classList.add('text-green-400');
+
+                    setTimeout(() => {
+                        window.location.href = 'index.html'; 
+                    }, 1000);
+
+                } else {
+                    console.error('Đăng nhập thất bại:', data.message);
+                    errorMessage.textContent = data.message || 'Lỗi không xác định.';
+                    errorMessage.classList.remove('hidden');
+                    errorMessage.classList.add('text-red-400');
+                }
+
+            } catch (error) {
+                console.error('Lỗi kết nối API:', error);
+                errorMessage.textContent = 'Không thể kết nối đến máy chủ. Vui lòng thử lại sau.';
+                errorMessage.classList.remove('hidden');
+                errorMessage.classList.add('text-red-400');
+            }
+        });
+    </script>
+
+</body>
+</html>
