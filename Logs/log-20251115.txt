@@ -36,3 +36,101 @@
 2025-11-15 08:43:48.696 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5296/index.html - null null
 2025-11-15 08:43:48.706 +07:00 [INF] Sending file. Request path: '/index.html'. Physical path: 'D:\23ct112-aspnetcore\wwwroot\index.html'
 2025-11-15 08:43:48.714 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5296/index.html - 200 3114 text/html 18.419ms
+2025-11-15 08:48:16.904 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5296/index.html - null null
+2025-11-15 08:48:16.907 +07:00 [INF] Sending file. Request path: '/index.html'. Physical path: 'D:\23ct112-aspnetcore\wwwroot\index.html'
+2025-11-15 08:48:16.910 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5296/index.html - 200 3940 text/html 5.828ms
+2025-11-15 08:48:21.336 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5296/index.html - null null
+2025-11-15 08:48:21.339 +07:00 [INF] The file /index.html was not modified
+2025-11-15 08:48:21.341 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5296/index.html - 304 null text/html 5.4486ms
+2025-11-15 08:48:23.576 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5296/index.html - null null
+2025-11-15 08:48:23.579 +07:00 [INF] The file /index.html was not modified
+2025-11-15 08:48:23.581 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5296/index.html - 304 null text/html 5.3003ms
+2025-11-15 08:50:45.656 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5296/index.html - null null
+2025-11-15 08:50:45.663 +07:00 [INF] Sending file. Request path: '/index.html'. Physical path: 'D:\23ct112-aspnetcore\wwwroot\index.html'
+2025-11-15 08:50:45.666 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5296/index.html - 200 4292 text/html 10.5074ms
+2025-11-15 08:51:50.041 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5296/index.html - null null
+2025-11-15 08:51:50.046 +07:00 [INF] Sending file. Request path: '/index.html'. Physical path: 'D:\23ct112-aspnetcore\wwwroot\index.html'
+2025-11-15 08:51:50.049 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5296/index.html - 200 4105 text/html 8.2133ms
+2025-11-15 08:52:33.176 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5296/index.html - null null
+2025-11-15 08:52:33.180 +07:00 [INF] Sending file. Request path: '/index.html'. Physical path: 'D:\23ct112-aspnetcore\wwwroot\index.html'
+2025-11-15 08:52:33.187 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5296/index.html - 200 4105 text/html 11.1013ms
+2025-11-15 08:57:54.409 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5296/index.html - null null
+2025-11-15 08:57:54.413 +07:00 [INF] Sending file. Request path: '/index.html'. Physical path: 'D:\23ct112-aspnetcore\wwwroot\index.html'
+2025-11-15 08:57:54.417 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5296/index.html - 200 4151 text/html 8.3277ms
+2025-11-15 08:58:36.088 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5296/index.html - null null
+2025-11-15 08:58:36.092 +07:00 [INF] Sending file. Request path: '/index.html'. Physical path: 'D:\23ct112-aspnetcore\wwwroot\index.html'
+2025-11-15 08:58:36.099 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5296/index.html - 200 4118 text/html 10.3858ms
+2025-11-15 09:00:27.886 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5296/index.html - null null
+2025-11-15 09:00:27.888 +07:00 [INF] The file /index.html was not modified
+2025-11-15 09:00:27.891 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5296/index.html - 304 null text/html 4.4721ms
+2025-11-15 09:11:43.352 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5296/index.html - null null
+2025-11-15 09:11:43.357 +07:00 [INF] Sending file. Request path: '/index.html'. Physical path: 'D:\23ct112-aspnetcore\wwwroot\index.html'
+2025-11-15 09:11:43.370 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5296/index.html - 200 5104 text/html 8.65ms
+2025-11-15 09:11:48.935 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5296/index.html - null null
+2025-11-15 09:11:48.940 +07:00 [INF] Sending file. Request path: '/index.html'. Physical path: 'D:\23ct112-aspnetcore\wwwroot\index.html'
+2025-11-15 09:11:48.945 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5296/index.html - 200 4118 text/html 10.0911ms
+2025-11-15 09:12:39.943 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5296/index.html - null null
+2025-11-15 09:12:39.945 +07:00 [INF] Sending file. Request path: '/index.html'. Physical path: 'D:\23ct112-aspnetcore\wwwroot\index.html'
+2025-11-15 09:12:39.952 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5296/index.html - 200 4591 text/html 8.8321ms
+2025-11-15 09:12:54.550 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5296/index.html - null null
+2025-11-15 09:12:54.557 +07:00 [INF] Sending file. Request path: '/index.html'. Physical path: 'D:\23ct112-aspnetcore\wwwroot\index.html'
+2025-11-15 09:12:54.563 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5296/index.html - 200 4118 text/html 12.0781ms
+2025-11-15 09:20:16.919 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5296/index.html - null null
+2025-11-15 09:20:16.923 +07:00 [INF] Sending file. Request path: '/index.html'. Physical path: 'D:\23ct112-aspnetcore\wwwroot\index.html'
+2025-11-15 09:20:16.929 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5296/index.html - 200 5294 text/html 9.6055ms
+2025-11-15 09:21:35.718 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5296/index.html - null null
+2025-11-15 09:21:35.724 +07:00 [INF] Sending file. Request path: '/index.html'. Physical path: 'D:\23ct112-aspnetcore\wwwroot\index.html'
+2025-11-15 09:21:35.730 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5296/index.html - 200 7151 text/html 11.9197ms
+2025-11-15 09:23:02.743 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5296/index.html - null null
+2025-11-15 09:23:02.748 +07:00 [INF] Sending file. Request path: '/index.html'. Physical path: 'D:\23ct112-aspnetcore\wwwroot\index.html'
+2025-11-15 09:23:02.756 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5296/index.html - 200 5313 text/html 12.3789ms
+2025-11-15 09:23:25.058 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5296/index.html - null null
+2025-11-15 09:23:25.068 +07:00 [INF] Sending file. Request path: '/index.html'. Physical path: 'D:\23ct112-aspnetcore\wwwroot\index.html'
+2025-11-15 09:23:25.070 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5296/index.html - 200 7151 text/html 11.4913ms
+2025-11-15 09:23:54.225 +07:00 [INF] Ứng dụng đang khởi động...
+2025-11-15 09:23:54.303 +07:00 [INF] Now listening on: http://localhost:5296
+2025-11-15 09:23:54.307 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-11-15 09:23:54.308 +07:00 [INF] Hosting environment: Development
+2025-11-15 09:23:54.309 +07:00 [INF] Content root path: D:\23ct112-aspnetcore
+2025-11-15 09:24:20.301 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5296/index.html - null null
+2025-11-15 09:24:20.341 +07:00 [INF] Sending file. Request path: '/index.html'. Physical path: 'D:\23ct112-aspnetcore\wwwroot\index.html'
+2025-11-15 09:24:20.344 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5296/index.html - 200 7151 text/html 44.1589ms
+2025-11-15 09:25:04.169 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5296/index.html - null null
+2025-11-15 09:25:04.177 +07:00 [INF] Sending file. Request path: '/index.html'. Physical path: 'D:\23ct112-aspnetcore\wwwroot\index.html'
+2025-11-15 09:25:04.183 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5296/index.html - 200 3986 text/html 14.2301ms
+2025-11-15 09:25:08.120 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5296/index.html - null null
+2025-11-15 09:25:08.126 +07:00 [INF] The file /index.html was not modified
+2025-11-15 09:25:08.128 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5296/index.html - 304 null text/html 7.3469ms
+2025-11-15 09:25:10.214 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5296/index.html - null null
+2025-11-15 09:25:10.224 +07:00 [INF] Sending file. Request path: '/index.html'. Physical path: 'D:\23ct112-aspnetcore\wwwroot\index.html'
+2025-11-15 09:25:10.227 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5296/index.html - 200 7151 text/html 13.5509ms
+2025-11-15 09:25:36.568 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5296/index.html - null null
+2025-11-15 09:25:36.571 +07:00 [INF] The file /index.html was not modified
+2025-11-15 09:25:36.572 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5296/index.html - 304 null text/html 3.88ms
+2025-11-15 09:25:37.223 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5296/index.html - null null
+2025-11-15 09:25:37.225 +07:00 [INF] The file /index.html was not modified
+2025-11-15 09:25:37.227 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5296/index.html - 304 null text/html 4.3088ms
+2025-11-15 09:25:52.422 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5296/index.html - null null
+2025-11-15 09:25:52.426 +07:00 [INF] Sending file. Request path: '/index.html'. Physical path: 'D:\23ct112-aspnetcore\wwwroot\index.html'
+2025-11-15 09:25:52.429 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5296/index.html - 200 5994 text/html 7.1271ms
+2025-11-15 09:25:56.678 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5296/index.html - null null
+2025-11-15 09:25:56.685 +07:00 [INF] Sending file. Request path: '/index.html'. Physical path: 'D:\23ct112-aspnetcore\wwwroot\index.html'
+2025-11-15 09:25:56.691 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5296/index.html - 200 7151 text/html 12.3607ms
+2025-11-15 09:27:36.505 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5296/index.html - null null
+2025-11-15 09:27:36.510 +07:00 [INF] Sending file. Request path: '/index.html'. Physical path: 'D:\23ct112-aspnetcore\wwwroot\index.html'
+2025-11-15 09:27:36.514 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5296/index.html - 200 4180 text/html 9.0145ms
+2025-11-15 09:27:41.478 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5296/index.html - null null
+2025-11-15 09:27:41.482 +07:00 [INF] Sending file. Request path: '/index.html'. Physical path: 'D:\23ct112-aspnetcore\wwwroot\index.html'
+2025-11-15 09:27:41.487 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5296/index.html - 200 7151 text/html 7.4913ms
+2025-11-15 09:28:20.519 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5296/index.html - null null
+2025-11-15 09:28:20.523 +07:00 [INF] Sending file. Request path: '/index.html'. Physical path: 'D:\23ct112-aspnetcore\wwwroot\index.html'
+2025-11-15 09:28:20.524 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5296/index.html - 200 4639 text/html 5.2837ms
+2025-11-15 09:28:27.158 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5296/index.html - null null
+2025-11-15 09:28:27.162 +07:00 [INF] Sending file. Request path: '/index.html'. Physical path: 'D:\23ct112-aspnetcore\wwwroot\index.html'
+2025-11-15 09:28:27.169 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5296/index.html - 200 7151 text/html 10.8316ms
+2025-11-15 09:29:23.895 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5296/index.html - null null
+2025-11-15 09:29:23.898 +07:00 [INF] Sending file. Request path: '/index.html'. Physical path: 'D:\23ct112-aspnetcore\wwwroot\index.html'
+2025-11-15 09:29:23.901 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5296/index.html - 200 4116 text/html 5.8114ms
+2025-11-15 09:30:11.560 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5296/index.html - null null
+2025-11-15 09:30:11.563 +07:00 [INF] Sending file. Request path: '/index.html'. Physical path: 'D:\23ct112-aspnetcore\wwwroot\index.html'
+2025-11-15 09:30:11.564 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5296/index.html - 200 4116 text/html 4.2279ms
